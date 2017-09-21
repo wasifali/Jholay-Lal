@@ -1,0 +1,121 @@
+.bound {
+    border: 1px solid lightblue;
+}
+
+h3{
+    color: #2b59a2;
+}
+.grey{
+    color: #8d8d8d;;
+}
+
+
+.left-pan
+{
+    height: 100%;
+    max-height: 100vh;
+    overflow: scroll;
+}
+
+.top-left-box{
+    padding: 10px;
+    text-align: center;
+}
+.chat-list{
+    padding: 10px;
+    line-height: normal;
+}
+
+.chat-sub{
+    line-height: 10px;
+}
+
+.progress{
+    height: 15px;
+    margin-bottom: 10px;
+}
+
+.nav{
+    margin-right: 35%;
+    padding: 5px;
+    margin-bottom: -20px;
+}
+
+.img-bound{
+    padding: 3px;
+    border: 2px solid #80be76;
+}
+
+.nav-images{
+    max-width: 60px;
+    max-height: 60px;
+}
+
+.nav-images:hover{
+    background-color: #80be76;
+}
+
+.nav-images:active{
+    background-color: #80be76;
+}
+
+.chat{
+    padding: 2%;
+}
+
+.left-area{
+    background-color: #e7f3f7;
+    height: 100vh;
+}
+
+.images-bar{
+    padding: 5%;
+    background-color: #e7f3f7;
+    overflow: scroll;
+    line-height: 6;
+    max-height: 100vh;
+    overflow-y: scroll;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+#custom-search-input{
+    padding: 3px;
+    border: solid 1px #E4E4E4;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+#custom-search-input input{
+    border: 0;
+    box-shadow: none;
+}
+
+#custom-search-input button{
+    margin: 2px 0 0 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+}
+
+#custom-search-input .glyphicon-search{
+    font-size: 23px;
+}
