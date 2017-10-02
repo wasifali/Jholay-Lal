@@ -2,9 +2,9 @@
     border: 1px solid lightblue;
 }
 
-h3{
-    color: #2b59a2;
-}
+
+
+
 .grey{
     color: #8d8d8d;;
 }
@@ -31,15 +31,12 @@ h3{
     width: 100vw;
 }
 
-.col-sm-8{
-    width: 73% !important;
-}
 
 .top-left-box{
     padding: 10px;
     text-align: center;
 }
-.chat-list{
+.prog-list{
     padding: 1px;
     line-height: 5px;
 }
@@ -81,7 +78,7 @@ h3{
     padding: 2%;
 }
 
-li:hover{
+.list-group-item:hover{
     background-color: #e7f3f7;
 }
 
@@ -183,10 +180,6 @@ li:hover{
 }
 
 
-.col-sm-4{
-    width: 27% !important;
-}
-
 .list-group-item{
     font-size: 12px;
 }
@@ -200,13 +193,14 @@ li:hover{
     border: solid 1px #E4E4E4;
     border-radius: 6px;
     background-color: #fff;
-    height: 25px;
+    height: 30px;
+    width: 90%;
 }
 
 #custom-search-input input{
     border: 0;
     box-shadow: none;
-    height: 15px;
+    height: 24px;
 }
 
 #custom-search-input button{
