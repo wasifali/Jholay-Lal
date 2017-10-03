@@ -20,7 +20,7 @@
                     <div class="row" style="margin-bottom: 20px;">
                         <div class="col-sm-1"></div>
                         <div class="col-sm-10">
-                            <h2><strong>Abcd efghi lmno</strong></h2>
+                            <h3><strong>Abcd efghi lmno</strong></h3>
                             <div id="custom-search-input">
                                 <div class="input-group">
                                 <span class="input-group-btn">
@@ -59,7 +59,6 @@
                 <div class="col-sm-4" style="border-right: 1px solid #439dbb; padding-right: 0px">
 
                     <!--chat lists-->
-
                     <ul class="list-group">
                         <div class="chat-list">
                             <li ng-class="{active : activeId === chat.userId}" class="list-group-item row" ng-repeat="chat in data" ng-click="showChat(chat.userId)">
@@ -71,7 +70,7 @@
                                     <div class="row">
                                         <div class="col-sm-8">
                                             <div class="row">
-                                                <p class="grey">xxxxx {{chat.userId}}</p>
+                                                <p class="grey"><i>Xxxxx</i> <span style="color: #8D8D8D; font-size: 15px;">{{chat.userId}}</span></p>
                                             </div>
                                             <div class="row">
                                                 <div class="progress">
@@ -81,8 +80,8 @@
                                                 </div>
                                             </div>
                                             <div class="row marg">
-                                                <p>{{chat.last_date}}   <span class="grey">xxxxx xxxx</span></p>
-                                                <p>{{chat.amount}}   <span class="grey">xxxxx xxxxx   {{chat.first_date}}</span></p>
+                                                <p><span class="date">{{chat.last_date}}</span>   <i style="font-size: 13px;">xxxxx xxxx</i></p>
+                                                <p><span class="date">{{chat.amount}}</span>   <i>xxxxx xxxxx   {{chat.first_date}}</i></p>
                                             </div>
                                         </div>
                                         <div class="col-sm-4" style="margin-top: 25px; text-align: center;">
@@ -94,6 +93,7 @@
                         </li>
                         </div>
                     </ul>
+
                 </div>
 
 

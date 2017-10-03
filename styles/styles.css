@@ -1,5 +1,11 @@
 html{
     overflow-x: hidden;
+    border: 2px solid #439DBB ;
+}
+
+i{
+    color: #8D8D8D;
+    font-size: 1.2vw;
 }
 
 .top-nav{
@@ -21,8 +27,20 @@ html{
     background-color: #80be76;
 }
 
-h2{
+h3{
     color: #2b59a2;
+    text-align: center;
+}
+
+li{
+    height: 75%;
+    border-bottom: 2px solid #C6C6C6 !important;
+}
+
+.date
+{
+    font-size: 17px;
+    color: #000000;
 }
 
 .chat-list{
@@ -32,22 +50,26 @@ h2{
 }
 
 .progress {
-    height: 15px;
+    height: 12px;
+    background-color: #E2E2E2;
 }
 
 .active {
-    background : #E8F5F8;
+    background : #B1D9E7;
 }
 
 .active:active {
-    background : #E8F5F8;
+    background : #B1D9E7;
 }
 
 .jumbotron{
-    background-color:#E8F5F8 !important;
+    background-color:#B1D9E7 !important;
     border-top: 1px solid lightgray;
     padding-left: 5%;
     padding-right: 14%;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    margin-bottom: 0 !important;
 }
 
 .chat-search{
@@ -63,8 +85,8 @@ h2{
 
 .images-bar{
     text-align: center;
-    background-color: #e7f3f7;
-    max-height: 80vh;
+    background-color: #B1D9E7;
+    height: 90vh;
     overflow-y: scroll;
     border-left: 1px solid lightgrey ;
 }
@@ -72,13 +94,13 @@ h2{
 .list-group-item.active, .list-group-item:hover, .list-group-item.active:hover{
     z-index: 2;
     color: black;
-    background-color: #e7f3f7;
+    background-color: #B1D9E7;
     border-color: #e7f3f7;
 }
 
 .chat-list-img{
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
 }
 
 /*Search bar styling*/
@@ -89,7 +111,8 @@ h2{
     border-radius: 6px;
     background-color: #e2e2e2;
     height: 30px;
-    width: 90%;
+    width: 70%;
+    margin-left: 66px;
 }
 
 #custom-search-input input{

@@ -709,6 +709,7 @@ angular.module('merch', [])
         ];
         $scope.chat = [];
         $scope.message;
+        $scope.filter = false;
 
         $scope.activeId = $scope.data[0].userId;
 
