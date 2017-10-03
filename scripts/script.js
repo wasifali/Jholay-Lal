@@ -50,7 +50,7 @@ angular.module('merch', [])
                 "state": "light-red.png",
                 "score": "50",
                 "amount": "$3,235 ",
-                "last_date": "3 dasy ago",
+                "last_date": "3 days ago",
                 "first_date": "16-Apr",
                 "activity": "miss you image",
                 "name": "Abcd Efghi Lmno",
@@ -600,7 +600,7 @@ angular.module('merch', [])
                 "state": "lighter-red.png",
                 "score": "50",
                 "amount": "$1,295 ",
-                "last_date": "2 month2 ago",
+                "last_date": "2 months ago",
                 "first_date": "15-May",
                 "activity": "miss you image",
                 "name": "Abcd Efghi Lmno",
@@ -672,7 +672,7 @@ angular.module('merch', [])
                 "state": "light-blue.png",
                 "score": "90",
                 "amount": "$1,289 ",
-                "last_date": "2 weeks ag0",
+                "last_date": "2 weeks ago",
                 "first_date": "14-Oct",
                 "activity": "thank you image",
                 "name": "Abcd Efghi Lmno",
@@ -707,7 +707,7 @@ angular.module('merch', [])
                 ]
             }
         ];
-        $scope.chat = [];
+        $scope.chat = $scope.data[0].chatMasseges;
         $scope.message;
         $scope.filter = false;
 

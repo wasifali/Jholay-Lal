@@ -1,0 +1,28 @@
+<head>
+    <!--Scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="./scripts/script.js"></script>
+
+    <!--Style Sheets-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title></title>
+</head>
+<body ng-app="merch">
+    <div ng-controller="desktopCtrl">
+        <nav class="container navbar navbar-default">
+            <a class="pull-left" href="index.html">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+        </nav>
+
+        <ul>
+            <li ng-repeat="msg in chat">
+                <p style="color: grey;">{{msg.date}}</p>
+                <p class="nav nav-pills nav-stacked">{{msg.message}}</p>
+                <p>Messages will show here.</p>
+            </li>
+        </ul>
+    </div>
+
+</body>

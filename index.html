@@ -14,6 +14,7 @@
 
     </head>
     <body ng-app="merch">
+        <!--DESKTOP VIEWS-->
         <div ng-controller="desktopCtrl" class="hidden-xs">
             <div class="row top-nav">
                 <div class="col-sm-4" style="border-right: 1px solid #439dbb;">
@@ -39,13 +40,13 @@
                         <div class="col-sm-3"></div>
                         <div class="col-sm-9 top-img-nav">
                             <a href="#">
-                                <img class="nav-images" src="assets/e1d9cf5a61545018abb8a2a5a2b707f1.png">
+                                <img class="active-img nav-images" src="assets/e1d9cf5a61545018abb8a2a5a2b707f1.png">
                             </a>
                             <a href="#">
                                 <img class="nav-images" src="assets/888994d93f9278273dfa9b89cc03a1ff.png">
                             </a>
                             <a href="#">
-                                <img class="nav-images" src="assets/3af8254284eacad070872de1fa6443a4.png">
+                                <img class="nav-images" src="assets/dial.png">
                             </a>
                             <a href="#">
                                 <img class="nav-images" src="assets/77e25ed9662c595f66f79822d5ac28c4.png">
@@ -70,7 +71,7 @@
                                     <div class="row">
                                         <div class="col-sm-8">
                                             <div class="row">
-                                                <p class="grey"><i>Xxxxx</i> <span style="color: #8D8D8D; font-size: 15px;">{{chat.userId}}</span></p>
+                                                <p><i class="desktop-font">Xxxxx</i> <span style="color: #8D8D8D; font-size: 15px;">{{chat.userId}}</span></p>
                                             </div>
                                             <div class="row">
                                                 <div class="progress">
@@ -80,8 +81,8 @@
                                                 </div>
                                             </div>
                                             <div class="row marg">
-                                                <p><span class="date">{{chat.last_date}}</span>   <i style="font-size: 13px;">xxxxx xxxx</i></p>
-                                                <p><span class="date">{{chat.amount}}</span>   <i>xxxxx xxxxx   {{chat.first_date}}</i></p>
+                                                <p><span class="date">{{chat.last_date}}</span>   <i class="desktop-font" style="font-size: 13px;">xxxxx xxxx</i></p>
+                                                <p><span class="date">{{chat.amount}}</span>   <i class="desktop-font">xxxxx xxxxx   {{chat.first_date}}</i></p>
                                             </div>
                                         </div>
                                         <div class="col-sm-4" style="margin-top: 25px; text-align: center;">
@@ -101,7 +102,7 @@
 
                     <!--Chat box-->
                     <div class="row">
-                        <div class="col-sm-10">
+                        <div class="col-sm-10 chat-box">
                             <div class="chat-search row">
                                 <div class="col-sm-4 col-sm-push-4">
                                     <div id="custom-chat-search">
@@ -116,10 +117,9 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <!--Chat messages-->
-                            <div class="progress" style="margin-top: 60%; height: 25px; padding: 0.3%;">
-                                {{message}}
+                            <div ng-repeat="msg in chat">
+                                <div style="color: grey;">{{msg.date}}</div>
+                                <div class="progress msg-bar">{{msg.message}}</div>
                             </div>
                         </div>
                         <!--Side image bar-->
@@ -191,6 +191,62 @@
                 </div>
             </div>
         </div>
-    </div>
+
+        <!--MOBILE VIEWS-->
+        <div ng-controller="desktopCtrl" class="hidden-sm hidden-md hidden-lg hidden-xl">
+            <nav class="container navbar navbar-default">
+                <h4 class="pull-left">Xxxx</h4>
+                <div class="pull-right">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4 col-md-offset-3">
+                                <form action="" class="search-form">
+                                    <div class="form-group has-feedback">
+                                        <label for="search" class="sr-only">User</label>
+                                        <input type="text" class="form-control" name="search" id="search" placeholder="search">
+                                        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <ul class="list-group" style="overflow-x: hidden;">
+                <div class="chat-list">
+                    <a href="chat.html">
+                    <li class="list-group-item row" ng-repeat="chat in data" ng-click="showChat(chat.userId)">
+                            <div class="col-xs-3">
+                                <img class="img-responsive" src="assets/{{chat.state}}">
+                            </div>
+                            <div class="chat-sub col-xs-9">
+                                <div class="row">
+                                    <div class="col-xs-8">
+                                        <div class="row">
+                                            <p class="grey"><i>Xxxxx</i> <span style="color: #8D8D8D; font-size: 15px;">{{chat.userId}}</span></p>
+                                        </div>
+                                        <div class="row">
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{chat.score}}" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                                    <span class="sr-only"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row marg">
+                                            <p><span>{{chat.last_date}}</span>   <i style="font-size: 13px;">(xxxxx xxxxxxxx)</i></p>
+                                            <p><span>{{chat.amount}}</span>   <i>xxxxx xxxxx   {{chat.first_date}}</i></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4" style="margin-top: 25px; text-align: center;">
+                                        <img class="chat-list-img" src="assets/57cc7d669fdc6b129215655281a0f9bc.png">
+                                    </div>
+                                </div>
+                            </div>
+                    </li>
+                    </a>
+                </div>
+            </ul>
+
+        </div>
     </body>
 </html>

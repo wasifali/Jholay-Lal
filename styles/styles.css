@@ -3,9 +3,36 @@ html{
     border: 2px solid #439DBB ;
 }
 
-i{
+.desktop-font{
     color: #8D8D8D;
     font-size: 1.2vw;
+}
+
+.msg-bar{
+    background-color: #8D74B1 !important;
+    padding-left: 1%;
+    color: white;
+    width: 50%;
+    height: 22px !important;
+}
+
+.active-img{
+    background-color: #3F9D2F;
+}
+
+.chat-box{
+    max-height: 90vh;
+    overflow-y: scroll;
+}
+
+i{
+    color: #8D8D8D;
+}
+
+.navbar{
+
+    margin-bottom: 0;
+    background : #B1D9E7;
 }
 
 .top-nav{
@@ -195,17 +222,17 @@ li{
 
 #custom-chat-search{
     padding: 3px;
-    border: solid 1px #E4E4E4;
+    border: solid 2px #65B4CE;
     border-radius: 6px;
     background-color: #fff;
     height: 30px;
-    width: 90%;
+    width: 100%;
 }
 
 #custom-chat-search input{
     border: 0;
     box-shadow: none;
-    height: 24px;
+    height: 23px;
 }
 
 #custom-chat-search button{
