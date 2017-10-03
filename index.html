@@ -59,7 +59,7 @@
                 <div class="col-sm-4" style="border-right: 1px solid #439dbb; padding-right: 0px">
 
                     <!--chat lists-->
-                    <ul class="list-group">
+                    <ul class="list-group" style="overflow-x: hidden;">
                         <div class="chat-list">
                             <li ng-class="{active : activeId === chat.userId}" class="list-group-item row" ng-repeat="chat in data" ng-click="showChat(chat.userId)">
                             <div ng-click="setActive(chat.userId)">
