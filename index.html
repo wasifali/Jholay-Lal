@@ -82,7 +82,7 @@
                     <!--chat lists-->
                     <ul class="list-group" style="overflow-x: hidden;">
                         <div class="chat-list">
-                            <li ng-class="{active : activeId === chat.userId}" class="list-group-item row" ng-repeat="chat in data" ng-click="showChat(chat.userId)">
+                            <li ng-class="{active : activeId === chat.userId}" class="list-group-item desktop-chat-list row" ng-repeat="chat in data" ng-click="showChat(chat.userId)">
                             <div ng-click="setActive(chat.userId)">
                             <div class="col-sm-3">
                                 <img class="img-responsive" src="assets/{{chat.state}}">
@@ -236,32 +236,32 @@
                 <div class="chat-list">
                     <a href="chat.html">
                     <li class="list-group-item row" ng-repeat="chat in data" ng-click="showChat(chat.userId)">
-                            <div class="col-xs-3">
-                                <img class="img-responsive" src="assets/{{chat.state}}">
-                            </div>
-                            <div class="chat-sub col-xs-9">
-                                <div class="row">
-                                    <div class="col-xs-8">
-                                        <div class="row">
-                                            <p class="grey"><i>Xxxxx</i> <span style="color: #8D8D8D; font-size: 15px;">{{chat.userId}}</span></p>
-                                        </div>
-                                        <div class="row">
-                                            <div class="progress">
-                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{chat.score}}" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                                                    <span class="sr-only"></span>
-                                                </div>
+                        <div class="col-xs-3">
+                            <img class="img-responsive" src="assets/{{chat.state}}">
+                        </div>
+                        <div class="chat-sub col-xs-9">
+                            <div class="row">
+                                <div class="col-xs-8">
+                                    <div class="row">
+                                        <p class="grey"><i>Xxxxx</i> <span style="color: #8D8D8D; font-size: 15px;">{{chat.userId}}</span></p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{chat.score}}" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                                <span class="sr-only"></span>
                                             </div>
                                         </div>
-                                        <div class="row marg">
-                                            <p><span>{{chat.last_date}}</span>   <i style="font-size: 13px;">(xxxxx xxxxxxxx)</i></p>
-                                            <p><span>{{chat.amount}}</span>   <i>xxxxx xxxxx   {{chat.first_date}}</i></p>
-                                        </div>
                                     </div>
-                                    <div class="col-xs-4" style="margin-top: 25px; text-align: center;">
-                                        <img class="chat-list-img" src="assets/57cc7d669fdc6b129215655281a0f9bc.png">
+                                    <div class="row marg">
+                                        <p><span>{{chat.last_date}}</span>   <i style="font-size: 13px;">(xxxxx xxxxxxxx)</i></p>
+                                        <p><span>{{chat.amount}}</span>   <i>xxxxx xxxxx   {{chat.first_date}}</i></p>
                                     </div>
                                 </div>
+                                <div class="col-xs-4" style="margin-top: 25px; text-align: center;">
+                                    <img class="chat-list-img" src="assets/57cc7d669fdc6b129215655281a0f9bc.png">
+                                </div>
                             </div>
+                        </div>
                     </li>
                     </a>
                 </div>

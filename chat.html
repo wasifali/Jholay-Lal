@@ -10,19 +10,55 @@
 </head>
 <body ng-app="merch">
     <div ng-controller="desktopCtrl">
-        <nav class="container navbar navbar-default">
-            <a class="pull-left" href="index.html">
+        <nav class="row navbar navbar-default">
+            <a class="pull-left col-xs-4" href="index.html">
                 <span class="glyphicon glyphicon-arrow-left"></span>
             </a>
         </nav>
 
-        <ul>
-            <li ng-repeat="msg in chat">
-                <p style="color: grey;">{{msg.date}}</p>
-                <p class="nav nav-pills nav-stacked">{{msg.message}}</p>
-                <p>Messages will show here.</p>
-            </li>
-        </ul>
+        <div class="row">
+            <div ondrop="drop(event)" ondragover="allowDrop(event)" class="chat-box">
+                <div class="chat-search row">
+                    <div class="col-sm-4 col-sm-push-4">
+                        <div id="custom-chat-search">
+                            <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-info btn-lg" type="button">
+                                                    <i class="glyphicon glyphicon-search"></i>
+                                                </button>
+                                            </span>
+                                <input type="text" class="form-control input-sm" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div ng-repeat="msg in chat">
+                    <div style="color: grey;">{{msg.date}}</div>
+                    <div class="progress msg-bar">{{msg.message}}</div>
+                </div>
+            </div>
+        </div>
+        <!--Side image bar-->
+        <!--<div class="container">-->
+            <!--<div class="jumbotron" style="overflow-x: scroll;">-->
+                    <!--<img id="a" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/57cc7d669fdc6b129215655281a0f9bc.png">-->
+                    <!--<img id="b" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/df197143ee4af5b5df056befe9ff6424.png">-->
+                    <!--<img id="c" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/7b8a79a2571bef94a3dd251a3b606c2b.png">-->
+                    <!--<img id="d" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/88f817e02e55c23c8ae886aaec8c9e73.png">-->
+                    <!--<img id="e" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/9db084f88b83df8ae0b9c5fb309a3e0f.png">-->
+                    <!--<img id="f" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/57cc7d669fdc6b129215655281a0f9bc.png">-->
+                    <!--<img id="g" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/df197143ee4af5b5df056befe9ff6424.png">-->
+                    <!--<img id="h" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/7b8a79a2571bef94a3dd251a3b606c2b.png">-->
+                    <!--<img id="i" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/57cc7d669fdc6b129215655281a0f9bc.png">-->
+                    <!--<img id="j" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/df197143ee4af5b5df056befe9ff6424.png">-->
+                    <!--<img id="k" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/7b8a79a2571bef94a3dd251a3b606c2b.png">-->
+                    <!--<img id="l" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/88f817e02e55c23c8ae886aaec8c9e73.png">-->
+                    <!--<img id="m" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/9db084f88b83df8ae0b9c5fb309a3e0f.png">-->
+                    <!--<img id="n" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/57cc7d669fdc6b129215655281a0f9bc.png">-->
+                    <!--<img id="o" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/df197143ee4af5b5df056befe9ff6424.png">-->
+                    <!--<img id="p" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/7b8a79a2571bef94a3dd251a3b606c2b.png">-->
+            <!--</div>-->
+        <!--</div>-->
     </div>
 
 </body>

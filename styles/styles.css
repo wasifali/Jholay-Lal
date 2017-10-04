@@ -119,11 +119,11 @@ li{
     border-left: 1px solid lightgrey ;
 }
 
-.list-group-item.active, .list-group-item:hover, .list-group-item.active:hover{
+.desktop-chat-list.active, .desktop-chat-list:hover, .desktop-chat-list.active:hover{
     z-index: 2;
     color: black;
     background-color: #B1D9E7;
-    border-color: #e7f3f7;
+    border-color: #B1D9E7;
 }
 
 .chat-list-img{
