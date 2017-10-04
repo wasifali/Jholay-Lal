@@ -9,6 +9,25 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
         <script src="./scripts/script.js"></script>
 
+        <!--Drag and drop images-->
+
+        <script>
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+
+            function drag(ev) {
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+
+            function drop(ev) {
+                console.log(ev);
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                ev.target.appendChild(document.getElementById(data));
+            }
+        </script>
+
         <!--Style Sheets-->
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="./styles/styles.css">
@@ -103,7 +122,7 @@
 
                     <!--Chat box-->
                     <div class="row">
-                        <div class="col-sm-10 chat-box">
+                        <div ondrop="drop(event)" ondragover="allowDrop(event)" class="col-sm-10 chat-box">
                             <div class="chat-search row">
                                 <div class="col-sm-4 col-sm-push-4">
                                     <div id="custom-chat-search">
@@ -127,52 +146,52 @@
                         <div class="col-sm-2">
                             <div class="images-bar">
                                 <div>
-                                    <img class="thumb" src="assets/57cc7d669fdc6b129215655281a0f9bc.png">
+                                    <img id="a" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/57cc7d669fdc6b129215655281a0f9bc.png">
                                 </div>
                                 <div >
-                                    <img class="thumb" src="assets/df197143ee4af5b5df056befe9ff6424.png">
+                                    <img id="b" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/df197143ee4af5b5df056befe9ff6424.png">
                                 </div>
                                 <div >
-                                    <img class="thumb" src="assets/7b8a79a2571bef94a3dd251a3b606c2b.png">
+                                    <img id="c" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/7b8a79a2571bef94a3dd251a3b606c2b.png">
                                 </div>
                                 <div >
-                                    <img class="thumb" src="assets/88f817e02e55c23c8ae886aaec8c9e73.png">
+                                    <img id="d" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/88f817e02e55c23c8ae886aaec8c9e73.png">
                                 </div>
                                 <div >
-                                    <img class="thumb" src="assets/9db084f88b83df8ae0b9c5fb309a3e0f.png">
+                                    <img id="e" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/9db084f88b83df8ae0b9c5fb309a3e0f.png">
                                 </div>
                                 <div >
-                                    <img class="thumb" src="assets/57cc7d669fdc6b129215655281a0f9bc.png">
+                                    <img draggable="true" ondragstart="drag(event)" class="thumb" src="assets/57cc7d669fdc6b129215655281a0f9bc.png">
                                 </div>
                                 <div>
-                                    <img class="thumb" src="assets/df197143ee4af5b5df056befe9ff6424.png">
+                                    <img draggable="true" ondragstart="drag(event)" class="thumb" src="assets/df197143ee4af5b5df056befe9ff6424.png">
                                 </div>
                                 <div>
-                                    <img class="thumb" src="assets/7b8a79a2571bef94a3dd251a3b606c2b.png">
+                                    <img draggable="true" ondragstart="drag(event)" class="thumb" src="assets/7b8a79a2571bef94a3dd251a3b606c2b.png">
                                 </div>
                                 <div>
-                                    <img class="thumb" src="assets/57cc7d669fdc6b129215655281a0f9bc.png">
+                                    <img draggable="true" ondragstart="drag(event)" class="thumb" src="assets/57cc7d669fdc6b129215655281a0f9bc.png">
                                 </div>
                                 <div >
-                                    <img class="thumb" src="assets/df197143ee4af5b5df056befe9ff6424.png">
+                                    <img draggable="true" ondragstart="drag(event)" class="thumb" src="assets/df197143ee4af5b5df056befe9ff6424.png">
                                 </div>
                                 <div >
-                                    <img class="thumb" src="assets/7b8a79a2571bef94a3dd251a3b606c2b.png">
+                                    <img draggable="true" ondragstart="drag(event)" class="thumb" src="assets/7b8a79a2571bef94a3dd251a3b606c2b.png">
                                 </div>
                                 <div >
-                                    <img class="thumb" src="assets/88f817e02e55c23c8ae886aaec8c9e73.png">
+                                    <img draggable="true" ondragstart="drag(event)" class="thumb" src="assets/88f817e02e55c23c8ae886aaec8c9e73.png">
                                 </div>
                                 <div >
-                                    <img class="thumb" src="assets/9db084f88b83df8ae0b9c5fb309a3e0f.png">
+                                    <img draggable="true" ondragstart="drag(event)" class="thumb" src="assets/9db084f88b83df8ae0b9c5fb309a3e0f.png">
                                 </div>
                                 <div >
-                                    <img class="thumb" src="assets/57cc7d669fdc6b129215655281a0f9bc.png">
+                                    <img draggable="true" ondragstart="drag(event)" class="thumb" src="assets/57cc7d669fdc6b129215655281a0f9bc.png">
                                 </div>
                                 <div>
-                                    <img class="thumb" src="assets/df197143ee4af5b5df056befe9ff6424.png">
+                                    <img draggable="true" ondragstart="drag(event)" class="thumb" src="assets/df197143ee4af5b5df056befe9ff6424.png">
                                 </div>
                                 <div>
-                                    <img class="thumb" src="assets/7b8a79a2571bef94a3dd251a3b606c2b.png">
+                                    <img draggable="true" ondragstart="drag(event)" class="thumb" src="assets/7b8a79a2571bef94a3dd251a3b606c2b.png">
                                 </div>
                             </div>
                         </div>
@@ -194,7 +213,7 @@
         </div>
 
         <!--MOBILE VIEWS-->
-        <div ng-controller="desktopCtrl" class="hidden-sm">
+        <div ng-controller="desktopCtrl" class="hidden-sm hidden-md hidden-lg hidden-xl">
             <nav class="container navbar navbar-default">
                 <h4 class="pull-left">Xxxx</h4>
                 <div class="pull-right">
@@ -250,4 +269,5 @@
 
         </div>
     </body>
+
 </html>
