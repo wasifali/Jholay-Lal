@@ -60,22 +60,22 @@ angular.module('merch', [])
                 "chatMasseges": [
                     {
                         user:'main',
-                        time: '01 / 12 / 2017 11: 35 AM',
+                        time: '2017-01-12',
                         text: 'Good to see yesterday'
                     },
                     {
                         user:'responder',
-                        time: '01 / 13 / 2017 11: 35 AM',
+                        time: '2017-01-13',
                         text: 'same here '
                     },
                     {
                         user:'main',
-                        time: '01 / 14 / 2017 11: 35 AM',
+                        time: '2017-01-14',
                         text: 'up for hike next week? '
                     },
                     {
                         user:'responder',
-                        time: '01 / 15 / 2017 11: 35 AM',
+                        time: '2017-01-15',
                         text: 'sure, how about Friday? '
                     }
                 ]
@@ -139,22 +139,22 @@ angular.module('merch', [])
                 "chatMasseges": [
                     {
                         user:'main',
-                        time: '01 / 12 / 2017 11: 35 AM',
+                        time: '2017-01-12',
                         text: 'Good to see yesterday'
                     },
                     {
                         user:'responder',
-                        time: '01 / 13 / 2017 11: 35 AM',
+                        time: '2017-01-13',
                         text: 'same here '
                     },
                     {
                         user:'main',
-                        time: '01 / 14 / 2017 11: 35 AM',
+                        time: '2017-01-14',
                         text: 'up for hike next week? '
                     },
                     {
                         user:'responder',
-                        time: '01 / 15 / 2017 11: 35 AM',
+                        time: '2017-01-15',
                         text: 'sure, how about Friday? '
                     }
                 ]
@@ -217,22 +217,22 @@ angular.module('merch', [])
                 "chatMasseges": [
                     {
                         user:'main',
-                        time: '01 / 12 / 2017 11: 35 AM',
+                        time: '2017-01-12',
                         text: 'Good to see yesterday'
                     },
                     {
                         user:'responder',
-                        time: '01 / 13 / 2017 11: 35 AM',
+                        time: '2017-01-13',
                         text: 'same here '
                     },
                     {
                         user:'main',
-                        time: '01 / 14 / 2017 11: 35 AM',
+                        time: '2017-01-14',
                         text: 'up for hike next week? '
                     },
                     {
                         user:'responder',
-                        time: '01 / 15 / 2017 11: 35 AM',
+                        time: '2017-01-15',
                         text: 'sure, how about Friday? '
                     }
                 ]
@@ -295,22 +295,22 @@ angular.module('merch', [])
                 "chatMasseges": [
                     {
                         user:'main',
-                        time: '01 / 12 / 2017 11: 35 AM',
+                        time: '2017-01-12',
                         text: 'Good to see yesterday'
                     },
                     {
                         user:'responder',
-                        time: '01 / 13 / 2017 11: 35 AM',
+                        time: '2017-01-13',
                         text: 'same here '
                     },
                     {
                         user:'main',
-                        time: '01 / 14 / 2017 11: 35 AM',
+                        time: '2017-01-14',
                         text: 'up for hike next week? '
                     },
                     {
                         user:'responder',
-                        time: '01 / 15 / 2017 11: 35 AM',
+                        time: '2017-01-15',
                         text: 'sure, how about Friday? '
                     }
                 ]
@@ -373,22 +373,22 @@ angular.module('merch', [])
                 "chatMasseges": [
                     {
                         user:'main',
-                        time: '01 / 12 / 2017 11: 35 AM',
+                        time: '2017-01-12',
                         text: 'Good to see yesterday'
                     },
                     {
                         user:'responder',
-                        time: '01 / 13 / 2017 11: 35 AM',
+                        time: '2017-01-13',
                         text: 'same here '
                     },
                     {
                         user:'main',
-                        time: '01 / 14 / 2017 11: 35 AM',
+                        time: '2017-01-14',
                         text: 'up for hike next week? '
                     },
                     {
                         user:'responder',
-                        time: '01 / 15 / 2017 11: 35 AM',
+                        time: '2017-01-15',
                         text: 'sure, how about Friday? '
                     }
                 ]
@@ -451,22 +451,22 @@ angular.module('merch', [])
                 "chatMasseges":[
                     {
                         user:'main',
-                        time: '01 / 12 / 2017 11: 35 AM',
+                        time: '2017-01-12',
                         text: 'Good to see yesterday'
                     },
                     {
                         user:'responder',
-                        time: '01 / 13 / 2017 11: 35 AM',
+                        time: '2017-01-13',
                         text: 'same here '
                     },
                     {
                         user:'main',
-                        time: '01 / 14 / 2017 11: 35 AM',
+                        time: '2017-01-14',
                         text: 'up for hike next week? '
                     },
                     {
                         user:'responder',
-                        time: '01 / 15 / 2017 11: 35 AM',
+                        time: '2017-01-15',
                         text: 'sure, how about Friday? '
                     }
                 ]
@@ -529,22 +529,22 @@ angular.module('merch', [])
                 "chatMasseges": [
                     {
                         user:'main',
-                        time: '01 / 12 / 2017 11: 35 AM',
+                        time: '2017-01-12',
                         text: 'Good to see yesterday'
                     },
                     {
                         user:'responder',
-                        time: '01 / 13 / 2017 11: 35 AM',
+                        time: '2017-01-13',
                         text: 'same here '
                     },
                     {
                         user:'main',
-                        time: '01 / 14 / 2017 11: 35 AM',
+                        time: '2017-01-14',
                         text: 'up for hike next week? '
                     },
                     {
                         user:'responder',
-                        time: '01 / 15 / 2017 11: 35 AM',
+                        time: '2017-01-15',
                         text: 'sure, how about Friday? '
                     }
                 ]
@@ -607,22 +607,22 @@ angular.module('merch', [])
                 "chatMasseges":[
                     {
                         user:'main',
-                        time: '01 / 12 / 2017 11: 35 AM',
+                        time: '2017-01-12',
                         text: 'Good to see yesterday'
                     },
                     {
                         user:'responder',
-                        time: '01 / 13 / 2017 11: 35 AM',
+                        time: '2017-01-13',
                         text: 'same here '
                     },
                     {
                         user:'main',
-                        time: '01 / 14 / 2017 11: 35 AM',
+                        time: '2017-01-14',
                         text: 'up for hike next week? '
                     },
                     {
                         user:'responder',
-                        time: '01 / 15 / 2017 11: 35 AM',
+                        time: '2017-01-15',
                         text: 'sure, how about Friday? '
                     }
                 ]
@@ -685,22 +685,22 @@ angular.module('merch', [])
                 "chatMasseges": [
                     {
                         user:'main',
-                        time: '01 / 12 / 2017 11: 35 AM',
+                        time: '2017-01-12',
                         text: 'Good to see yesterday'
                     },
                     {
                         user:'responder',
-                        time: '01 / 13 / 2017 11: 35 AM',
+                        time: '2017-01-13',
                         text: 'same here '
                     },
                     {
                         user:'main',
-                        time: '01 / 14 / 2017 11: 35 AM',
+                        time: '2017-01-14',
                         text: 'up for hike next week? '
                     },
                     {
                         user:'responder',
-                        time: '01 / 15 / 2017 11: 35 AM',
+                        time: '2017-01-15',
                         text: 'sure, how about Friday? '
                     }
                 ]
