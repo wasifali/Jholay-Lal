@@ -47,10 +47,14 @@ i{
     max-width: 60px;
     max-height: 60px;
     padding: 7px;
-    border: 2px solid #80be76;
+    border: 2px solid #3f9d2f;
 }
 
 .nav-images:hover{
+    background-color: #3f9d2f;
+}
+
+.nav-images:visited {
     background-color: #80be76;
 }
 
@@ -299,29 +303,8 @@ body {
     background:#fff;
 }
 
-a:link,
-a:visited {
-    text-decoration:none;
-    color:#c55500;
-}
-
-a:visited {
-    color:#730800;
-}
-
-a:hover,
-a:focus,
-a:active {
-    border:0;
-    color:#fff;
-    background:#c55500;
-}
-
-a:visited:hover,
-a:visited:focus,
-a:visited:active {
-    color:#fff;
-    background:#730800;
+a:hover, a:active, a:focus, a:visited{
+    text-decoration: none !important;
 }
 
 #container {
