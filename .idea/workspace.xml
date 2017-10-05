@@ -2,39 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53e8ef67-cec9-43a7-a482-2c4506bde15b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/057379648aeaa4fff204d1699cf60192.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/0f07a2039cf3f7961b783bea9c240698.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/233321d800e0f02e78a0e0b4a2d09bc6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/34774f3f28d77bcec8197e5813ad3e55.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/3585e2c46e3e78fd0e0a85f55c68ab36.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/50d38b907efdb6c32d94ad59b000f518.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/57cc7d669fdc6b129215655281a0f9bc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/5dfd8ec386c713befe7fa1a48edfda41.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/67c18efe7ff9f5e79cd3c7d22164d3da.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/77e25ed9662c595f66f79822d5ac28c4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/7b8a79a2571bef94a3dd251a3b606c2b.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/888994d93f9278273dfa9b89cc03a1ff.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/88f817e02e55c23c8ae886aaec8c9e73.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/8d764c570b0739585ce77d9c3fcb93ff.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/9bc7d905ba74cd7ecd8012c7033af77b.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/9db084f88b83df8ae0b9c5fb309a3e0f.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/acf77231c85349482d4e7415e0174f7e.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/c82b8ef1def85bbf2a53a9552dcac2f0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/d4e90075ad7cb1e95555074ae3a81ca9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/d6fc35fa7307500ee9ae195ec19fb3f3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/df197143ee4af5b5df056befe9ff6424.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/e1d9cf5a61545018abb8a2a5a2b707f1.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/blue.png" afterPath="$PROJECT_DIR$/assets/blue.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/dial.png" afterPath="$PROJECT_DIR$/assets/dial.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/gray.png" afterPath="$PROJECT_DIR$/assets/gray.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/light-blue.png" afterPath="$PROJECT_DIR$/assets/light-blue.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/light-red.png" afterPath="$PROJECT_DIR$/assets/light-red.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/lighter-blue.png" afterPath="$PROJECT_DIR$/assets/lighter-blue.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/lighter-red.png" afterPath="$PROJECT_DIR$/assets/lighter-red.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/red.png" afterPath="$PROJECT_DIR$/assets/red.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/search.png" afterPath="$PROJECT_DIR$/assets/search.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/script.js" afterPath="$PROJECT_DIR$/scripts/script.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/styles.css" afterPath="$PROJECT_DIR$/styles/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -88,21 +55,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6057234">
-              <caret line="773" column="32" selection-start-line="773" selection-start-column="32" selection-end-line="773" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="771" column="51" selection-start-line="771" selection-start-column="51" selection-end-line="771" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/styles/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.296296">
-              <caret line="307" column="11" selection-start-line="307" selection-start-column="11" selection-end-line="307" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.024916943">
+              <caret line="114" column="23" selection-start-line="114" selection-start-column="23" selection-end-line="114" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -142,9 +109,9 @@
         <option value="$PROJECT_DIR$/styles/style.css" />
         <option value="$PROJECT_DIR$/angular.html" />
         <option value="$PROJECT_DIR$/chat.html" />
-        <option value="$PROJECT_DIR$/styles/styles.css" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/scripts/script.js" />
+        <option value="$PROJECT_DIR$/styles/styles.css" />
       </list>
     </option>
   </component>
@@ -597,14 +564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.296296">
-          <caret line="307" column="11" selection-start-line="307" selection-start-column="11" selection-end-line="307" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.627451">
@@ -636,8 +595,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6057234">
-          <caret line="773" column="32" selection-start-line="773" selection-start-column="32" selection-end-line="773" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="771" column="51" selection-start-line="771" selection-start-column="51" selection-end-line="771" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.024916943">
+          <caret line="114" column="23" selection-start-line="114" selection-start-column="23" selection-end-line="114" selection-end-column="23" />
           <folding />
         </state>
       </provider>

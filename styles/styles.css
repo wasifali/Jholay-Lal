@@ -119,7 +119,7 @@ li{
     border-left: 1px solid lightgrey ;
 }
 
-.desktop-chat-list.active, .desktop-chat-list:hover, .desktop-chat-list.active:hover{
+.desktop-chat-list.active, .desktop-chat-list.active:hover{
     z-index: 2;
     color: black;
     background-color: #B1D9E7;
