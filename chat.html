@@ -11,33 +11,34 @@
 <body ng-app="merch">
     <div ng-controller="desktopCtrl">
         <nav class="row navbar navbar-default">
-            <a class="pull-left col-xs-4" href="index.html">
+            <a class="pull-left" href="index.html">
                 <span class="glyphicon glyphicon-arrow-left"></span>
             </a>
         </nav>
 
-        <div class="row">
-            <div ondrop="drop(event)" ondragover="allowDrop(event)" class="chat-box">
+        <div ondrop="drop(event)" ondragover="allowDrop(event)" class="chat-box">
                 <div class="chat-search row">
                     <div class="col-sm-4 col-sm-push-4">
                         <div id="custom-chat-search">
                             <div class="input-group">
-                                            <span class="input-group-btn">
-                                                <button class="btn btn-info btn-lg" type="button">
-                                                    <i class="glyphicon glyphicon-search"></i>
-                                                </button>
-                                            </span>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-info btn-lg" type="button">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </span>
                                 <input type="text" class="form-control input-sm" />
                             </div>
                         </div>
                     </div>
                 </div>
-                <div ng-repeat="msg in chat">
-                    <div style="color: grey;">{{msg.date}}</div>
-                    <div class="progress msg-bar">{{msg.message}}</div>
+                <div ondrop="drop(event)" ondragover="allowDrop(event)" class="col-sm-10 chat-box">
+                    <div ng-repeat="msg in chat">
+                        <div ng-if="msg.user === 'main'" class="triangle-right left">{{msg.time}} <br> {{msg.text}}</div>
+                        <div ng-if="msg.user === 'responder'" class="triangle-right right">{{msg.time}} <br> {{msg.text}}</div>
+                    </div>
                 </div>
             </div>
-        </div>
+
         <!--Side image bar-->
         <!--<div class="container">-->
             <!--<div class="jumbotron" style="overflow-x: scroll;">-->

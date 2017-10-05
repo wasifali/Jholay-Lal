@@ -771,17 +771,19 @@ angular.module('merch', [])
 
         $scope.sendMessage = function(id, message){
             $scope.message = "";
-            var date = new Date();
-            date = date.toISOString().slice(0,10);
-            var msg = {
-                user:'main',
-                time: date,
-                text: message
-            }
+            if(message.length > 0 ) {
+                var date = new Date();
+                date = date.toISOString().slice(0, 10);
+                var msg = {
+                    user: 'main',
+                    time: date,
+                    text: message
+                }
 
-            for(i = 0; i < $scope.data.length ; i++){
-                if($scope.data[i].userId === id){
-                    $scope.data[i].chatMasseges.push(msg);
+                for (i = 0; i < $scope.data.length; i++) {
+                    if ($scope.data[i].userId === id) {
+                        $scope.data[i].chatMasseges.push(msg);
+                    }
                 }
             }
 
