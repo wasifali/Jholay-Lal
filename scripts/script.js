@@ -9,7 +9,7 @@ angular.module('merch', [])
                 "amount": "$3,456 ",
                 "last_date": "1 day ago",
                 "first_date": "17-Jul",
-                "activity": "thank you image",
+                "activity": "thank-you.png",
                 "name": "Abcd Efghi Lmno",
                 "attribute": "Lmmn Pqrstu Vwxyzabc",
                 "amount2": "$72 ",
@@ -20,28 +20,24 @@ angular.module('merch', [])
                 "action_text": "Action1 Action1 Action1",
                 "chatMasseges": [
                     {
-                        "date" : "01/12/2017 11:35 AM",
-                        "message" : "Hi"
+                        user:'main',
+                        time: '2017-01-12',
+                        text: 'Hi, how are you? '
                     },
                     {
-                        "date" : "01/12/2017 11:35 AM",
-                        "message" : "how are you?"
+                        user:'responder',
+                        time: '2017-01-13',
+                        text: 'I am fine how about you? '
                     },
                     {
-                        "date" : " 01/13/2017 11:35 AM",
-                        "message":"I am fine how about you?"
+                        user:'main',
+                        time: '2017-01-14',
+                        text: 'Up for coffee? '
                     },
                     {
-                        "date" : "01/14/2017 11:35 AM",
-                        "message":"Up for coffee?"
-                    },
-                    {
-                        "date" : "01/15/2017 11:35 AM",
-                        "message":"sure"
-                    },
-                    {
-                        "date" : "01/16/2017 11:35 AM",
-                        "message":"wanna grab something to eat"
+                        user:'responder',
+                        time: '2017-01-15',
+                        text: 'sure '
                     }
                 ]
             },
@@ -52,7 +48,7 @@ angular.module('merch', [])
                 "amount": "$3,235 ",
                 "last_date": "3 days ago",
                 "first_date": "16-Apr",
-                "activity": "miss you image",
+                "activity": "miss-you.png",
                 "name": "Abcd Efghi Lmno",
                 "attribute": "Lmmn Vwxyzabc Pqrstu",
                 "amount2": "$73 ",
@@ -63,18 +59,24 @@ angular.module('merch', [])
                 "action_text": "Action2 Action2 Action2",
                 "chatMasseges": [
                     {
-                        "date" : "01/12/2017 11:35 AM",
-                        "message" : ":Good to see yesterday"
+                        user:'main',
+                        time: '01 / 12 / 2017 11: 35 AM',
+                        text: 'Good to see yesterday'
                     },
                     {
-                        "date" : "01/13/2017 11:35 AM",
-                        "message" : "same here"
-                    },{
-                        "date" : "01/14/2017 11:35 AM",
-                        "message" : "up for hike next week?"
-                    },{
-                        "date" : "01/15/2017 11:35 AM",
-                        "message" : "sure, how about Friday?"
+                        user:'responder',
+                        time: '01 / 13 / 2017 11: 35 AM',
+                        text: 'same here '
+                    },
+                    {
+                        user:'main',
+                        time: '01 / 14 / 2017 11: 35 AM',
+                        text: 'up for hike next week? '
+                    },
+                    {
+                        user:'responder',
+                        time: '01 / 15 / 2017 11: 35 AM',
+                        text: 'sure, how about Friday? '
                     }
                 ]
             },
@@ -85,7 +87,7 @@ angular.module('merch', [])
                 "amount": "$6,534 ",
                 "last_date": "1 week ago",
                 "first_date": "15-May",
-                "activity": "chat image",
+                "activity": "chat.png",
                 "name": "Abcd Efghi Lmno",
                 "attribute": "Vwxyzabc Pqrstu Lmmn",
                 "amount2": "$74 ",
@@ -97,28 +99,24 @@ angular.module('merch', [])
                 "chatMasseges":
                     [
                         {
-                            "date" : "01/12/2017 11:35 AM",
-                            "message" : "Hi"
+                            user:'main',
+                            time: '2017-01-12',
+                            text: 'Hi, how are you? '
                         },
                         {
-                            "date" : "01/12/2017 11:35 AM",
-                            "message" : "how are you?"
+                            user:'responder',
+                            time: '2017-01-13',
+                            text: 'I am fine how about you? '
                         },
                         {
-                            "date" : "01/13/2017 11:35 AM",
-                            "message" : "I am fine how about you?"
+                            user:'main',
+                            time: '2017-01-14',
+                            text: 'Up for coffee? '
                         },
                         {
-                            "date" : "01/14/2017 11:35 AM",
-                            "message" : "Up for coffee?"
-                        },
-                        {
-                            "date" : "01/15/2017 11:35 AM",
-                            "message" : "sure"
-                        },
-                        {
-                            "date" : "01/16/2017 11:35 AM",
-                            "message" : "wanna grab something to eat"
+                            user:'responder',
+                            time: '2017-01-15',
+                            text: 'sure '
                         }
                     ]
             },
@@ -129,7 +127,7 @@ angular.module('merch', [])
                 "amount": "$1,234 ",
                 "last_date": "4 day ago",
                 "first_date": "15-Nov",
-                "activity": "thank you image",
+                "activity": "thank-you.png",
                 "name": "Abcd Efghi Lmno",
                 "attribute": "Pqrstu Lmmn Vwxyzabc",
                 "amount2": "$75 ",
@@ -140,20 +138,24 @@ angular.module('merch', [])
                 "action_text": "Action1 Action1 Action1",
                 "chatMasseges": [
                     {
-                        "date" : "01/12/2017 11:35 AM",
-                        "message" : "Good to see yesterday"
+                        user:'main',
+                        time: '01 / 12 / 2017 11: 35 AM',
+                        text: 'Good to see yesterday'
                     },
                     {
-                        "date" : "01/13/2017 11:35 AM",
-                        "message" : "same here"
+                        user:'responder',
+                        time: '01 / 13 / 2017 11: 35 AM',
+                        text: 'same here '
                     },
                     {
-                        "date" : "01/14/2017 11:35 AM",
-                        "message" : "up for hike next week?"
+                        user:'main',
+                        time: '01 / 14 / 2017 11: 35 AM',
+                        text: 'up for hike next week? '
                     },
                     {
-                        "date" : "01/15/2017 11:35 AM",
-                        "message" : "sure, how about Friday?"
+                        user:'responder',
+                        time: '01 / 15 / 2017 11: 35 AM',
+                        text: 'sure, how about Friday? '
                     }
                 ]
             },
@@ -164,7 +166,7 @@ angular.module('merch', [])
                 "amount": "$2,356 ",
                 "last_date": "1 month ago",
                 "first_date": "14-Oct",
-                "activity": "miss you image",
+                "activity": "miss-you.png",
                 "name": "Abcd Efghi Lmno",
                 "attribute": "Lmmn Pqrstu Vwxyzabc",
                 "amount2": "$76 ",
@@ -175,28 +177,24 @@ angular.module('merch', [])
                 "action_text": "Action2 Action2 Action2",
                 "chatMasseges": [
                     {
-                        "date" : "01/12/2017 11:35 AM",
-                        "message" : "Hi"
+                        user:'main',
+                        time: '2017-01-12',
+                        text: 'Hi, how are you? '
                     },
                     {
-                        "date" : "01/12/2017 11:35 AM",
-                        "message" : "how are you?"
+                        user:'responder',
+                        time: '2017-01-13',
+                        text: 'I am fine how about you? '
                     },
                     {
-                        "date" : "01/13/2017 11:35 AM",
-                        "message" : "I am fine how about you?"
+                        user:'main',
+                        time: '2017-01-14',
+                        text: 'Up for coffee? '
                     },
                     {
-                        "date" : "01/14/2017 11:35 AM",
-                        "message" : "Up for coffee?"
-                    },
-                    {
-                        "date" : "01/15/2017 11:35 AM",
-                        "message" : "sure"
-                    },
-                    {
-                        "date" : "01/16/2017 11:35 AM",
-                        "message" : "wanna grab something to eat;"
+                        user:'responder',
+                        time: '2017-01-15',
+                        text: 'sure '
                     }
                 ]
             },
@@ -207,7 +205,7 @@ angular.module('merch', [])
                 "amount": "$123 ",
                 "last_date": "2 month2 ago",
                 "first_date": "16-Sep",
-                "activity": "chat image",
+                "activity": "chat.png",
                 "name": "Abcd Efghi Lmno",
                 "attribute": "Lmmn Vwxyzabc Pqrstu",
                 "amount2": "$77 ",
@@ -218,18 +216,24 @@ angular.module('merch', [])
                 "action_text": "Action3 Action3 Action3",
                 "chatMasseges": [
                     {
-                        "date" : "01/12/2017 11:35 AM",
-                        "message" : ":Good to see yesterday"
+                        user:'main',
+                        time: '01 / 12 / 2017 11: 35 AM',
+                        text: 'Good to see yesterday'
                     },
                     {
-                        "date" : "01/13/2017 11:35 AM",
-                        "message" : "same here"
-                    },{
-                        "date" : "01/14/2017 11:35 AM",
-                        "message" : "up for hike next week?"
-                    },{
-                        "date" : "01/15/2017 11:35 AM",
-                        "message" : "sure, how about Friday?"
+                        user:'responder',
+                        time: '01 / 13 / 2017 11: 35 AM',
+                        text: 'same here '
+                    },
+                    {
+                        user:'main',
+                        time: '01 / 14 / 2017 11: 35 AM',
+                        text: 'up for hike next week? '
+                    },
+                    {
+                        user:'responder',
+                        time: '01 / 15 / 2017 11: 35 AM',
+                        text: 'sure, how about Friday? '
                     }
                 ]
             },
@@ -240,7 +244,7 @@ angular.module('merch', [])
                 "amount": "$9,853 ",
                 "last_date": "3 months ago",
                 "first_date": "17-Mar",
-                "activity": "thank you image",
+                "activity": "thank-you.png",
                 "name": "Abcd Efghi Lmno",
                 "attribute": "Vwxyzabc Pqrstu Lmmn",
                 "amount2": "$78 ",
@@ -251,24 +255,24 @@ angular.module('merch', [])
                 "action_text": "Action1 Action1 Action1",
                 "chatMasseges": [
                     {
-                        "date" : "01/12/2017 11:35 AM",
-                        "message" : "Hi"
+                        user:'main',
+                        time: '2017-01-12',
+                        text: 'Hi, how are you? '
                     },
                     {
-                        "date" : "01/12/2017 11:35 AM",
-                        "message" : "how are you?"
+                        user:'responder',
+                        time: '2017-01-13',
+                        text: 'I am fine how about you? '
                     },
                     {
-                        "date" : "01/13/2017 11:35 AM",
-                        "message" : "I am fine how about you?"
+                        user:'main',
+                        time: '2017-01-14',
+                        text: 'Up for coffee? '
                     },
                     {
-                        "date" : "01/14/2017 11:35 AM",
-                        "message" : "Up for coffee?"
-                    },
-                    {
-                        "date" : "01/15/2017 11:35 AM",
-                        "message" : "sure"
+                        user:'responder',
+                        time: '2017-01-15',
+                        text: 'sure '
                     }
                 ]
             },
@@ -279,7 +283,7 @@ angular.module('merch', [])
                 "amount": "$1,234 ",
                 "last_date": "2 weeks ag0",
                 "first_date": "17-Jan",
-                "activity": "miss you image",
+                "activity": "miss-you.png",
                 "name": "Abcd Efghi Lmno",
                 "attribute": "Pqrstu Lmmn Vwxyzabc",
                 "amount2": "$79 ",
@@ -290,18 +294,24 @@ angular.module('merch', [])
                 "action_text": "Action2 Action2 Action2",
                 "chatMasseges": [
                     {
-                        "date" : "01/12/2017 11:35 AM",
-                        "message" : ":Good to see yesterday"
+                        user:'main',
+                        time: '01 / 12 / 2017 11: 35 AM',
+                        text: 'Good to see yesterday'
                     },
                     {
-                        "date" : "01/13/2017 11:35 AM",
-                        "message" : "same here"
-                    },{
-                        "date" : "01/14/2017 11:35 AM",
-                        "message" : "up for hike next week?"
-                    },{
-                        "date" : "01/15/2017 11:35 AM",
-                        "message" : "sure, how about Friday?"
+                        user:'responder',
+                        time: '01 / 13 / 2017 11: 35 AM',
+                        text: 'same here '
+                    },
+                    {
+                        user:'main',
+                        time: '01 / 14 / 2017 11: 35 AM',
+                        text: 'up for hike next week? '
+                    },
+                    {
+                        user:'responder',
+                        time: '01 / 15 / 2017 11: 35 AM',
+                        text: 'sure, how about Friday? '
                     }
                 ]
             },
@@ -312,7 +322,7 @@ angular.module('merch', [])
                 "amount": "$807 ",
                 "last_date": "5 months ago",
                 "first_date": "16-Aug",
-                "activity": "chat image",
+                "activity": "chat.png",
                 "name": "Abcd Efghi Lmno",
                 "attribute": "Lmmn Pqrstu Vwxyzabc",
                 "amount2": "$80 ",
@@ -323,24 +333,24 @@ angular.module('merch', [])
                 "action_text": "Action3 Action3 Action3",
                 "chatMasseges": [
                     {
-                        "date" : "01/12/2017 11:35 AM",
-                        "message" : "Hi"
+                        user:'main',
+                        time: '2017-01-12',
+                        text: 'Hi, how are you? '
                     },
                     {
-                        "date" : "01/12/2017 11:35 AM",
-                        "message" : "how are you?"
+                        user:'responder',
+                        time: '2017-01-13',
+                        text: 'I am fine how about you? '
                     },
                     {
-                        "date" : "01/13/2017 11:35 AM",
-                        "message" : "I am fine how about you?"
+                        user:'main',
+                        time: '2017-01-14',
+                        text: 'Up for coffee? '
                     },
                     {
-                        "date" : "01/14/2017 11:35 AM",
-                        "message" : "Up for coffee?"
-                    },
-                    {
-                        "date" : "01/15/2017 11:35 AM",
-                        "message" : "sure"
+                        user:'responder',
+                        time: '2017-01-15',
+                        text: 'sure '
                     }
                 ]
             },
@@ -351,7 +361,7 @@ angular.module('merch', [])
                 "amount": "$52,340 ",
                 "last_date": "1 year ago",
                 "first_date": "16-Nov",
-                "activity": "thank you image",
+                "activity": "thank-you.png",
                 "name": "Abcd Efghi Lmno",
                 "attribute": "Lmmn Vwxyzabc Pqrstu",
                 "amount2": "$81 ",
@@ -362,18 +372,24 @@ angular.module('merch', [])
                 "action_text": "Action1 Action1 Action1",
                 "chatMasseges": [
                     {
-                        "date" : "01/12/2017 11:35 AM",
-                        "message" : ":Good to see yesterday"
+                        user:'main',
+                        time: '01 / 12 / 2017 11: 35 AM',
+                        text: 'Good to see yesterday'
                     },
                     {
-                        "date" : "01/13/2017 11:35 AM",
-                        "message" : "same here"
-                    },{
-                        "date" : "01/14/2017 11:35 AM",
-                        "message" : "up for hike next week?"
-                    },{
-                        "date" : "01/15/2017 11:35 AM",
-                        "message" : "sure, how about Friday?"
+                        user:'responder',
+                        time: '01 / 13 / 2017 11: 35 AM',
+                        text: 'same here '
+                    },
+                    {
+                        user:'main',
+                        time: '01 / 14 / 2017 11: 35 AM',
+                        text: 'up for hike next week? '
+                    },
+                    {
+                        user:'responder',
+                        time: '01 / 15 / 2017 11: 35 AM',
+                        text: 'sure, how about Friday? '
                     }
                 ]
             },
@@ -384,7 +400,7 @@ angular.module('merch', [])
                 "amount": "$2,135 ",
                 "last_date": "3 days ago",
                 "first_date": "16-Dec",
-                "activity": "miss you image",
+                "activity": "miss-you.png",
                 "name": "Abcd Efghi Lmno",
                 "attribute": "Vwxyzabc Pqrstu Lmmn",
                 "amount2": "$82 ",
@@ -395,24 +411,24 @@ angular.module('merch', [])
                 "action_text": "Action2 Action2 Action2",
                 "chatMasseges": [
                     {
-                        "date" : "01/12/2017 11:35 AM",
-                        "message" : "Hi"
+                        user:'main',
+                        time: '2017-01-12',
+                        text: 'Hi, how are you? '
                     },
                     {
-                        "date" : "01/12/2017 11:35 AM",
-                        "message" : "how are you?"
+                        user:'responder',
+                        time: '2017-01-13',
+                        text: 'I am fine how about you? '
                     },
                     {
-                        "date" : "01/13/2017 11:35 AM",
-                        "message" : "I am fine how about you?"
+                        user:'main',
+                        time: '2017-01-14',
+                        text: 'Up for coffee? '
                     },
                     {
-                        "date" : "01/14/2017 11:35 AM",
-                        "message" : "Up for coffee?"
-                    },
-                    {
-                        "date" : "01/15/2017 11:35 AM",
-                        "message" : "sure"
+                        user:'responder',
+                        time: '2017-01-15',
+                        text: 'sure '
                     }
                 ]
             },
@@ -423,7 +439,7 @@ angular.module('merch', [])
                 "amount": "$923 ",
                 "last_date": "1 day ago",
                 "first_date": "17-Apr",
-                "activity": "chat image",
+                "activity": "chat.png",
                 "name": "Abcd Efghi Lmno",
                 "attribute": "Pqrstu Lmmn Vwxyzabc",
                 "amount2": "$83 ",
@@ -434,18 +450,24 @@ angular.module('merch', [])
                 "action_text": "Action3 Action3 Action3",
                 "chatMasseges":[
                     {
-                        "date" : "01/12/2017 11:35 AM",
-                        "message" : ":Good to see yesterday"
+                        user:'main',
+                        time: '01 / 12 / 2017 11: 35 AM',
+                        text: 'Good to see yesterday'
                     },
                     {
-                        "date" : "01/13/2017 11:35 AM",
-                        "message" : "same here"
-                    },{
-                        "date" : "01/14/2017 11:35 AM",
-                        "message" : "up for hike next week?"
-                    },{
-                        "date" : "01/15/2017 11:35 AM",
-                        "message" : "sure, how about Friday?"
+                        user:'responder',
+                        time: '01 / 13 / 2017 11: 35 AM',
+                        text: 'same here '
+                    },
+                    {
+                        user:'main',
+                        time: '01 / 14 / 2017 11: 35 AM',
+                        text: 'up for hike next week? '
+                    },
+                    {
+                        user:'responder',
+                        time: '01 / 15 / 2017 11: 35 AM',
+                        text: 'sure, how about Friday? '
                     }
                 ]
             },
@@ -456,7 +478,7 @@ angular.module('merch', [])
                 "amount": "$1,123 ",
                 "last_date": "3 dasy ago",
                 "first_date": "17-Jan",
-                "activity": "thank you image",
+                "activity": "thank-you.png",
                 "name": "Abcd Efghi Lmno",
                 "attribute": "Lmmn Pqrstu Vwxyzabc",
                 "amount2": "$84 ",
@@ -467,24 +489,24 @@ angular.module('merch', [])
                 "action_text": "Action1 Action1 Action1",
                 "chatMasseges": [
                     {
-                        "date" : "01/12/2017 11:35 AM",
-                        "message" : "Hi"
+                        user:'main',
+                        time: '2017-01-12',
+                        text: 'Hi, how are you? '
                     },
                     {
-                        "date" : "01/12/2017 11:35 AM",
-                        "message" : "how are you?"
+                        user:'responder',
+                        time: '2017-01-13',
+                        text: 'I am fine how about you? '
                     },
                     {
-                        "date" : "01/13/2017 11:35 AM",
-                        "message" : "I am fine how about you?"
+                        user:'main',
+                        time: '2017-01-14',
+                        text: 'Up for coffee? '
                     },
                     {
-                        "date" : "01/14/2017 11:35 AM",
-                        "message" : "Up for coffee?"
-                    },
-                    {
-                        "date" : "01/15/2017 11:35 AM",
-                        "message" : "sure"
+                        user:'responder',
+                        time: '2017-01-15',
+                        text: 'sure '
                     }
                 ]
             },
@@ -495,7 +517,7 @@ angular.module('merch', [])
                 "amount": "$812 ",
                 "last_date": "1 week ago",
                 "first_date": "17-May",
-                "activity": "miss you image",
+                "activity": "miss-you.png",
                 "name": "Abcd Efghi Lmno",
                 "attribute": "Lmmn Vwxyzabc Pqrstu",
                 "amount2": "$85 ",
@@ -506,20 +528,24 @@ angular.module('merch', [])
                 "action_text": "Action2 Action2 Action2",
                 "chatMasseges": [
                     {
-                        "date" : "01/12/2017 11:35 AM",
-                        "message" : ":Good to see yesterday"
+                        user:'main',
+                        time: '01 / 12 / 2017 11: 35 AM',
+                        text: 'Good to see yesterday'
                     },
                     {
-                        "date" : "01/13/2017 11:35 AM",
-                        "message" : "same here"
+                        user:'responder',
+                        time: '01 / 13 / 2017 11: 35 AM',
+                        text: 'same here '
                     },
                     {
-                        "date" : "01/14/2017 11:35 AM",
-                        "message" : "up for hike next week?"
+                        user:'main',
+                        time: '01 / 14 / 2017 11: 35 AM',
+                        text: 'up for hike next week? '
                     },
                     {
-                        "date" : "01/15/2017 11:35 AM",
-                        "message" : "sure, how about Friday?"
+                        user:'responder',
+                        time: '01 / 15 / 2017 11: 35 AM',
+                        text: 'sure, how about Friday? '
                     }
                 ]
             },
@@ -530,7 +556,7 @@ angular.module('merch', [])
                 "amount": "$186 ",
                 "last_date": "4 day ago",
                 "first_date": "17-Jul",
-                "activity": "chat image",
+                "activity": "chat.png",
                 "name": "Abcd Efghi Lmno",
                 "attribute": "Vwxyzabc Pqrstu Lmmn",
                 "amount2": "$86 ",
@@ -541,24 +567,24 @@ angular.module('merch', [])
                 "action_text": "Action3 Action3 Action3",
                 "chatMasseges": [
                     {
-                        "date" : "01/12/2017 11:35 AM",
-                        "message" : "Hi"
+                        user:'main',
+                        time: '2017-01-12',
+                        text: 'Hi, how are you? '
                     },
                     {
-                        "date" : "01/12/2017 11:35 AM",
-                        "message" : "how are you?"
+                        user:'responder',
+                        time: '2017-01-13',
+                        text: 'I am fine how about you? '
                     },
                     {
-                        "date" : "01/13/2017 11:35 AM",
-                        "message" : "I am fine how about you?"
+                        user:'main',
+                        time: '2017-01-14',
+                        text: 'Up for coffee? '
                     },
                     {
-                        "date" : "01/14/2017 11:35 AM",
-                        "message" : "Up for coffee?"
-                    },
-                    {
-                        "date" : "01/15/2017 11:35 AM",
-                        "message" : "sure"
+                        user:'responder',
+                        time: '2017-01-15',
+                        text: 'sure '
                     }
                 ]
             },
@@ -569,7 +595,7 @@ angular.module('merch', [])
                 "amount": "$2,345 ",
                 "last_date": "1 month ago",
                 "first_date": "16-Apr",
-                "activity": "thank you image",
+                "activity": "thank-you.png",
                 "name": "Abcd Efghi Lmno",
                 "attribute": "Pqrstu Lmmn Vwxyzabc",
                 "amount2": "$87 ",
@@ -580,18 +606,24 @@ angular.module('merch', [])
                 "action_text": "Action1 Action1 Action1",
                 "chatMasseges":[
                     {
-                        "date" : "01/12/2017 11:35 AM",
-                        "message" : ":Good to see yesterday"
+                        user:'main',
+                        time: '01 / 12 / 2017 11: 35 AM',
+                        text: 'Good to see yesterday'
                     },
                     {
-                        "date" : "01/13/2017 11:35 AM",
-                        "message" : "same here"
-                    },{
-                        "date" : "01/14/2017 11:35 AM",
-                        "message" : "up for hike next week?"
-                    },{
-                        "date" : "01/15/2017 11:35 AM",
-                        "message" : "sure, how about Friday?"
+                        user:'responder',
+                        time: '01 / 13 / 2017 11: 35 AM',
+                        text: 'same here '
+                    },
+                    {
+                        user:'main',
+                        time: '01 / 14 / 2017 11: 35 AM',
+                        text: 'up for hike next week? '
+                    },
+                    {
+                        user:'responder',
+                        time: '01 / 15 / 2017 11: 35 AM',
+                        text: 'sure, how about Friday? '
                     }
                 ]
             },
@@ -602,7 +634,7 @@ angular.module('merch', [])
                 "amount": "$1,295 ",
                 "last_date": "2 months ago",
                 "first_date": "15-May",
-                "activity": "miss you image",
+                "activity": "miss-you.png",
                 "name": "Abcd Efghi Lmno",
                 "attribute": "Lmmn Pqrstu Vwxyzabc",
                 "amount2": "$88 ",
@@ -613,24 +645,24 @@ angular.module('merch', [])
                 "action_text": "Action2 Action2 Action2",
                 "chatMasseges": [
                     {
-                        "date" : "01/12/2017 11:35 AM",
-                        "message" : "Hi"
+                        user:'main',
+                        time: '2017-01-12',
+                        text: 'Hi, how are you? '
                     },
                     {
-                        "date" : "01/12/2017 11:35 AM",
-                        "message" : "how are you?"
+                        user:'responder',
+                        time: '2017-01-13',
+                        text: 'I am fine how about you? '
                     },
                     {
-                        "date" : "01/13/2017 11:35 AM",
-                        "message" : "I am fine how about you?"
+                        user:'main',
+                        time: '2017-01-14',
+                        text: 'Up for coffee? '
                     },
                     {
-                        "date" : "01/14/2017 11:35 AM",
-                        "message" : "Up for coffee?"
-                    },
-                    {
-                        "date" : "01/15/2017 11:35 AM",
-                        "message" : "sure"
+                        user:'responder',
+                        time: '2017-01-15',
+                        text: 'sure '
                     }
                 ]
             },
@@ -641,7 +673,7 @@ angular.module('merch', [])
                 "amount": "$12,308 ",
                 "last_date": "3 months ago",
                 "first_date": "15-Nov",
-                "activity": "chat image",
+                "activity": "chat.png",
                 "name": "Abcd Efghi Lmno",
                 "attribute": "Lmmn Vwxyzabc Pqrstu",
                 "amount2": "$89 ",
@@ -652,18 +684,24 @@ angular.module('merch', [])
                 "action_text": "Action3 Action3 Action3",
                 "chatMasseges": [
                     {
-                        "date" : "01/12/2017 11:35 AM",
-                        "message" : ":Good to see yesterday"
+                        user:'main',
+                        time: '01 / 12 / 2017 11: 35 AM',
+                        text: 'Good to see yesterday'
                     },
                     {
-                        "date" : "01/13/2017 11:35 AM",
-                        "message" : "same here"
-                    },{
-                        "date" : "01/14/2017 11:35 AM",
-                        "message" : "up for hike next week?"
-                    },{
-                        "date" : "01/15/2017 11:35 AM",
-                        "message" : "sure, how about Friday?"
+                        user:'responder',
+                        time: '01 / 13 / 2017 11: 35 AM',
+                        text: 'same here '
+                    },
+                    {
+                        user:'main',
+                        time: '01 / 14 / 2017 11: 35 AM',
+                        text: 'up for hike next week? '
+                    },
+                    {
+                        user:'responder',
+                        time: '01 / 15 / 2017 11: 35 AM',
+                        text: 'sure, how about Friday? '
                     }
                 ]
             },
@@ -674,7 +712,7 @@ angular.module('merch', [])
                 "amount": "$1,289 ",
                 "last_date": "2 weeks ago",
                 "first_date": "14-Oct",
-                "activity": "thank you image",
+                "activity": "thank-you.png",
                 "name": "Abcd Efghi Lmno",
                 "attribute": "Vwxyzabc Pqrstu Lmmn",
                 "amount2": "$90 ",
@@ -685,29 +723,30 @@ angular.module('merch', [])
                 "action_text": "Action1 Action1 Action1",
                 "chatMasseges": [
                     {
-                        "date" : "01/12/2017 11:35 AM",
-                        "message" : "Hi"
+                        user:'main',
+                        time: '2017-01-12',
+                        text: 'Hi, how are you? '
                     },
                     {
-                        "date" : "01/12/2017 11:35 AM",
-                        "message" : "how are you?"
+                        user:'responder',
+                        time: '2017-01-13',
+                        text: 'I am fine how about you? '
                     },
                     {
-                        "date" : "01/13/2017 11:35 AM",
-                        "message" : "I am fine how about you?"
+                        user:'main',
+                        time: '2017-01-14',
+                        text: 'Up for coffee? '
                     },
                     {
-                        "date" : "01/14/2017 11:35 AM",
-                        "message" : "Up for coffee?"
-                    },
-                    {
-                        "date" : "01/15/2017 11:35 AM",
-                        "message" : "sure"
+                        user:'responder',
+                        time: '2017-01-15',
+                        text: 'sure '
                     }
                 ]
             }
         ];
         $scope.chat = $scope.data[0].chatMasseges;
+        $scope.chatId = $scope.data[0].userId;
         $scope.message;
         $scope.filter = false;
 
@@ -725,7 +764,27 @@ angular.module('merch', [])
             for(i = 0; i < $scope.data.length ; i++){
                 if($scope.data[i].userId === id){
                     $scope.chat = $scope.data[i].chatMasseges ;
+                    $scope.chatId = $scope.data[i].userId;
                 }
             }
         }
+
+        $scope.sendMessage = function(id, message){
+            $scope.message = "";
+            var date = new Date();
+            date = date.toISOString().slice(0,10);
+            var msg = {
+                user:'main',
+                time: date,
+                text: message
+            }
+
+            for(i = 0; i < $scope.data.length ; i++){
+                if($scope.data[i].userId === id){
+                    $scope.data[i].chatMasseges.push(msg);
+                }
+            }
+
+        }
+
     }]);

@@ -12,6 +12,15 @@
         <!--Drag and drop images-->
 
         <script>
+//            var inputBox = document.getElementById("chat");
+//            inputBox.val("");
+//            inputBox.addEventListener("keyup", function(event) {
+//                        event.preventDefault();
+//                        if (event.keyCode == 13) {
+//                            document.getElementById("sendMessage").click();
+//                        }
+//                    });
+
             function allowDrop(ev) {
                 ev.preventDefault();
             }
@@ -41,7 +50,7 @@
                     <div class="row" style="margin-bottom: 20px;">
                         <div class="col-sm-1"></div>
                         <div class="col-sm-10">
-                            <h3><strong>Abcd efghi lmno</strong></h3>
+                            <h3><strong>Abcd Efghi Lmno</strong></h3>
                             <div id="custom-search-input">
                                 <div class="input-group">
                                 <span class="input-group-btn">
@@ -60,16 +69,16 @@
                         <div class="col-sm-3"></div>
                         <div class="col-sm-9 top-img-nav">
                             <a href="#">
-                                <img class="active-img nav-images" src="assets/e1d9cf5a61545018abb8a2a5a2b707f1.png">
+                                <img class="active-img nav-images" src="assets/chat-icon.png">
                             </a>
                             <a href="#">
-                                <img class="nav-images" src="assets/888994d93f9278273dfa9b89cc03a1ff.png">
+                                <img class="nav-images" src="assets/filter.png">
                             </a>
                             <a href="#">
                                 <img class="nav-images" src="assets/dial.png">
                             </a>
                             <a href="#">
-                                <img class="nav-images" src="assets/77e25ed9662c595f66f79822d5ac28c4.png">
+                                <img class="nav-images" src="assets/rotation.png">
                             </a>
                         </div>
                     </div>
@@ -106,7 +115,7 @@
                                             </div>
                                         </div>
                                         <div class="col-sm-4" style="margin-top: 25px; text-align: center;">
-                                            <img class="chat-list-img" src="assets/57cc7d669fdc6b129215655281a0f9bc.png">
+                                            <img class="chat-list-img" src="assets/{{chat.activity}}">
                                         </div>
                                     </div>
                                 </div>
@@ -138,74 +147,71 @@
                                 </div>
                             </div>
                             <div ng-repeat="msg in chat">
-                                <div style="color: grey;">{{msg.date}}</div>
-                                <div class="progress msg-bar">{{msg.message}}</div>
+                                <div ng-if="msg.user === 'main'" class="triangle-right left">{{msg.time}} <br> {{msg.text}}</div>
+                                <div ng-if="msg.user === 'responder'" class="triangle-right right">{{msg.time}} <br> {{msg.text}}</div>
                             </div>
                         </div>
                         <!--Side image bar-->
                         <div class="col-sm-2">
                             <div class="images-bar">
                                 <div>
-                                    <img id="a" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/57cc7d669fdc6b129215655281a0f9bc.png">
+                                    <img id="a" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/miss-you.png">
                                 </div>
                                 <div >
-                                    <img id="b" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/df197143ee4af5b5df056befe9ff6424.png">
+                                    <img id="b" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/thank-you.png">
                                 </div>
                                 <div >
-                                    <img id="c" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/7b8a79a2571bef94a3dd251a3b606c2b.png">
+                                    <img id="c" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/feedback.png">
                                 </div>
                                 <div >
-                                    <img id="d" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/88f817e02e55c23c8ae886aaec8c9e73.png">
+                                    <img id="d" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/earn-reward.png">
                                 </div>
                                 <div >
-                                    <img id="e" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/9db084f88b83df8ae0b9c5fb309a3e0f.png">
-                                </div>
-                                <div >
-                                    <img draggable="true" ondragstart="drag(event)" class="thumb" src="assets/57cc7d669fdc6b129215655281a0f9bc.png">
+                                    <img id="e" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/speaker.png">
                                 </div>
                                 <div>
-                                    <img draggable="true" ondragstart="drag(event)" class="thumb" src="assets/df197143ee4af5b5df056befe9ff6424.png">
+                                    <img id="f" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/miss-you.png">
+                                </div>
+                                <div >
+                                    <img id="g" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/thank-you.png">
+                                </div>
+                                <div >
+                                    <img id="h" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/feedback.png">
+                                </div>
+                                <div >
+                                    <img id="i" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/earn-reward.png">
+                                </div>
+                                <div >
+                                    <img id="j" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/speaker.png">
                                 </div>
                                 <div>
-                                    <img draggable="true" ondragstart="drag(event)" class="thumb" src="assets/7b8a79a2571bef94a3dd251a3b606c2b.png">
-                                </div>
-                                <div>
-                                    <img draggable="true" ondragstart="drag(event)" class="thumb" src="assets/57cc7d669fdc6b129215655281a0f9bc.png">
+                                    <img id="k" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/miss-you.png">
                                 </div>
                                 <div >
-                                    <img draggable="true" ondragstart="drag(event)" class="thumb" src="assets/df197143ee4af5b5df056befe9ff6424.png">
+                                    <img id="l" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/thank-you.png">
                                 </div>
                                 <div >
-                                    <img draggable="true" ondragstart="drag(event)" class="thumb" src="assets/7b8a79a2571bef94a3dd251a3b606c2b.png">
+                                    <img id="m" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/feedback.png">
                                 </div>
                                 <div >
-                                    <img draggable="true" ondragstart="drag(event)" class="thumb" src="assets/88f817e02e55c23c8ae886aaec8c9e73.png">
+                                    <img id="n" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/earn-reward.png">
                                 </div>
                                 <div >
-                                    <img draggable="true" ondragstart="drag(event)" class="thumb" src="assets/9db084f88b83df8ae0b9c5fb309a3e0f.png">
-                                </div>
-                                <div >
-                                    <img draggable="true" ondragstart="drag(event)" class="thumb" src="assets/57cc7d669fdc6b129215655281a0f9bc.png">
-                                </div>
-                                <div>
-                                    <img draggable="true" ondragstart="drag(event)" class="thumb" src="assets/df197143ee4af5b5df056befe9ff6424.png">
-                                </div>
-                                <div>
-                                    <img draggable="true" ondragstart="drag(event)" class="thumb" src="assets/7b8a79a2571bef94a3dd251a3b606c2b.png">
+                                    <img id="o" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/speaker.png">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="input-bar jumbotron">
                         <div id="custom-chat-input">
-                            <div class="input-group col-sm-12">
-                                <input ng-model="message" type="text" class="form-control input-lg" placeholder="Click here to write something." />
+                            <form class="input-group col-sm-12">
+                                <input id="chat" ng-model="message" type="text" class="form-control input-lg" placeholder="Click here to write something." />
                                 <span class="input-group-btn">
-                                    <button class="btn btn-info btn-lg" type="button">
+                                    <button id="sendMessage" ng-click="sendMessage(chatId, message)" class="btn btn-info btn-lg" type="submit">
                                         <i class="glyphicon glyphicon-edit"></i>
                                     </button>
                                 </span>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -258,7 +264,7 @@
                                     </div>
                                 </div>
                                 <div class="col-xs-4" style="margin-top: 25px; text-align: center;">
-                                    <img class="chat-list-img" src="assets/57cc7d669fdc6b129215655281a0f9bc.png">
+                                    <img class="chat-list-img" src="assets/{{chat.state}}">
                                 </div>
                             </div>
                         </div>
