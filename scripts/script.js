@@ -785,6 +785,10 @@ angular.module('merch', [])
                         $scope.data[i].chatMasseges.push(msg);
                     }
                 }
+                var old = $location.hash();
+                $location.hash(id);
+                $anchorScroll();
+                $location.hash(old);
             }
 
         }

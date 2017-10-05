@@ -27,6 +27,7 @@ html{
 .chat-box{
     max-height: 90vh;
     overflow-y: scroll;
+    padding-bottom: 20px;
 }
 
 i{
