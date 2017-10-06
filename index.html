@@ -35,9 +35,9 @@
                 ev.target.appendChild(div);
                 ev.preventDefault();
                 var data = ev.dataTransfer.getData("text");
-                var img = document.getElementById(data);
+                var image = document.getElementById(data);
                 var elem = document.createElement("img");
-                elem.setAttribute("src", img.src);
+                elem.setAttribute("src", image.src);
                 elem.setAttribute("class", "thumb");
                 elem.style.cssText = 'margin-top: 80px;margin-left: 30px;';
                 div.appendChild(elem);

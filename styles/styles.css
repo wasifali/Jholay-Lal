@@ -26,7 +26,7 @@ html{
 
 .chat-box{
     max-height: 72vh;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 i{
@@ -504,7 +504,7 @@ blockquote p {
 .triangle-right {
     position:relative;
     padding:10px;
-    margin:0em 0 0.5em;
+    margin:0em 0 1em;
     color:#fff;
     background:#075698; /* default background for browsers without gradient support */
     /* css3 */
