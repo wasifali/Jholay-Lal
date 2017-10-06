@@ -24,6 +24,8 @@
         <div ondrop="drop(event)" ondragover="allowDrop(event)" class="mobile-chat-box">
             <div ondrop="drop(event)" ondragover="allowDrop(event)" class="mobile-chat-box">
                 <div ng-repeat="msg in chat">
+                    <span ng-if="msg.user === 'main'" style="margin-left: 25px;" class="left">{{msg.time}}</span>
+                    <span ng-if="msg.user === 'responder'" class="right">{{msg.time}}</span>
                     <div ng-if="msg.user === 'main'" class="triangle-right left" style="font-size: 18px;">{{msg.text}}</div>
                     <div ng-if="msg.user === 'responder'" class="triangle-right right" style="font-size: 18px;">{{msg.text}}</div>
                 </div>
