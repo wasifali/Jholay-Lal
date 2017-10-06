@@ -30,13 +30,19 @@
             }
 
             function drop(ev) {
+
+                var div = document.createElement("div");
+                div.setAttribute("class", "triangle-right left");
+                div.style.cssText = 'margin: 100px !important;';
+                ev.target.appendChild(div);
+
                 ev.preventDefault();
                 var data = ev.dataTransfer.getData("text");
                 var img = document.getElementById(data);
                 var elem = document.createElement("img");
                 elem.setAttribute("src", img.src);
                 elem.setAttribute("class", "thumb");
-                ev.target.appendChild(elem);
+                div.appendChild(elem);
             }
         </script>
 
@@ -52,7 +58,7 @@
                 <div class="col-sm-4" style="border-right: 1px solid #439dbb;">
                     <div class="row" style="margin-bottom: 20px;">
                         <div class="col-sm-1"></div>
-                        <div class="col-sm-10 col-md-8 col-lg-6 col-xl-4">
+                        <div class="col-sm-10">
                             <h3><strong>Abcd Efghi Lmno</strong></h3>
                             <div id="custom-search-input">
                                 <div class="input-group">
@@ -134,7 +140,7 @@
 
                     <!--Chat box-->
                     <div class="row">
-                        <div class="col-sm-10 chat-box">
+                        <div class="col-sm-10 chat-box" ondrop="drop(event)" ondragover="allowDrop(event)">
                             <div class="chat-search row">
                                 <div class="col-sm-4 col-sm-push-4">
                                     <div id="custom-chat-search">
@@ -150,12 +156,16 @@
                                 </div>
                             </div>
                             <div ng-repeat="msg in chat">
-                                <div ondrop="drop(event)" ondragover="allowDrop(event)" ng-if="msg.user === 'main'" class="triangle-right left">{{msg.text}}</div>
-                                <div ng-if="msg.user === 'responder'" class="triangle-right right">{{msg.text}}</div>
+                                <div class="row">
+                                    <span ng-if="msg.user === 'main'" style="margin-left: 25px;" class="left">{{msg.time}}</span>
+                                    <span ng-if="msg.user === 'responder'" class="right">{{msg.time}}</span>
+                                    <div ng-if="msg.user === 'main'" class="triangle-right left">{{msg.text}}</div>
+                                    <div ng-if="msg.user === 'responder'" class="triangle-right right">{{msg.text}}</div>
+                                </div>
                             </div>
                         </div>
                         <!--Side image bar-->
-                        <div class="col-sm-2">
+                        <div ondrop="drop(null)" ondragover="allowDrop(null)" class="col-sm-2">
                             <div class="images-bar">
                                 <div>
                                     <img id="a" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/miss-you.png">
@@ -256,7 +266,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="progress">
-                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{chat.score}}" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{chat.score}}" aria-valuemin="0" aria-valuemax="100" style="width: {{chat.score}}%">
                                                 <span class="sr-only"></span>
                                             </div>
                                         </div>

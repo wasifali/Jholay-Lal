@@ -21,22 +21,22 @@ angular.module('merch', [])
                 "chatMasseges": [
                     {
                         user:'main',
-                        time: '2017-01-12',
+                        time: '2017-01-12 11:35',
                         text: 'Hi, how are you? '
                     },
                     {
                         user:'responder',
-                        time: '2017-01-13',
+                        time: '2017-01-13 11:35',
                         text: 'I am fine how about you? '
                     },
                     {
                         user:'main',
-                        time: '2017-01-14',
+                        time: '2017-01-14 11:35',
                         text: 'Up for coffee? '
                     },
                     {
                         user:'responder',
-                        time: '2017-01-15',
+                        time: '2017-01-15 11:35',
                         text: 'sure '
                     }
                 ]
@@ -60,22 +60,22 @@ angular.module('merch', [])
                 "chatMasseges": [
                     {
                         user:'main',
-                        time: '2017-01-12',
+                        time: '2017-01-12 11:35',
                         text: 'Good to see yesterday'
                     },
                     {
                         user:'responder',
-                        time: '2017-01-13',
+                        time: '2017-01-13 11:35',
                         text: 'same here '
                     },
                     {
                         user:'main',
-                        time: '2017-01-14',
+                        time: '2017-01-14 11:35',
                         text: 'up for hike next week? '
                     },
                     {
                         user:'responder',
-                        time: '2017-01-15',
+                        time: '2017-01-15 11:35',
                         text: 'sure, how about Friday? '
                     }
                 ]
@@ -100,22 +100,22 @@ angular.module('merch', [])
                     [
                         {
                             user:'main',
-                            time: '2017-01-12',
+                            time: '2017-01-12 11:35',
                             text: 'Hi, how are you? '
                         },
                         {
                             user:'responder',
-                            time: '2017-01-13',
+                            time: '2017-01-13 11:35',
                             text: 'I am fine how about you? '
                         },
                         {
                             user:'main',
-                            time: '2017-01-14',
+                            time: '2017-01-14 11:35',
                             text: 'Up for coffee? '
                         },
                         {
                             user:'responder',
-                            time: '2017-01-15',
+                            time: '2017-01-15 11:35',
                             text: 'sure '
                         }
                     ]
@@ -139,22 +139,22 @@ angular.module('merch', [])
                 "chatMasseges": [
                     {
                         user:'main',
-                        time: '2017-01-12',
+                        time: '2017-01-12 11:35',
                         text: 'Good to see yesterday'
                     },
                     {
                         user:'responder',
-                        time: '2017-01-13',
+                        time: '2017-01-13 11:35',
                         text: 'same here '
                     },
                     {
                         user:'main',
-                        time: '2017-01-14',
+                        time: '2017-01-14 11:35',
                         text: 'up for hike next week? '
                     },
                     {
                         user:'responder',
-                        time: '2017-01-15',
+                        time: '2017-01-15 11:35',
                         text: 'sure, how about Friday? '
                     }
                 ]
@@ -178,22 +178,22 @@ angular.module('merch', [])
                 "chatMasseges": [
                     {
                         user:'main',
-                        time: '2017-01-12',
+                        time: '2017-01-12 11:35',
                         text: 'Hi, how are you? '
                     },
                     {
                         user:'responder',
-                        time: '2017-01-13',
+                        time: '2017-01-13 11:35',
                         text: 'I am fine how about you? '
                     },
                     {
                         user:'main',
-                        time: '2017-01-14',
+                        time: '2017-01-14 11:35',
                         text: 'Up for coffee? '
                     },
                     {
                         user:'responder',
-                        time: '2017-01-15',
+                        time: '2017-01-15 11:35',
                         text: 'sure '
                     }
                 ]
@@ -217,22 +217,22 @@ angular.module('merch', [])
                 "chatMasseges": [
                     {
                         user:'main',
-                        time: '2017-01-12',
+                        time: '2017-01-12 11:35',
                         text: 'Good to see yesterday'
                     },
                     {
                         user:'responder',
-                        time: '2017-01-13',
+                        time: '2017-01-13 11:35',
                         text: 'same here '
                     },
                     {
                         user:'main',
-                        time: '2017-01-14',
+                        time: '2017-01-14 11:35',
                         text: 'up for hike next week? '
                     },
                     {
                         user:'responder',
-                        time: '2017-01-15',
+                        time: '2017-01-15 11:35',
                         text: 'sure, how about Friday? '
                     }
                 ]
@@ -256,22 +256,22 @@ angular.module('merch', [])
                 "chatMasseges": [
                     {
                         user:'main',
-                        time: '2017-01-12',
+                        time: '2017-01-12 11:35',
                         text: 'Hi, how are you? '
                     },
                     {
                         user:'responder',
-                        time: '2017-01-13',
+                        time: '2017-01-13 11:35',
                         text: 'I am fine how about you? '
                     },
                     {
                         user:'main',
-                        time: '2017-01-14',
+                        time: '2017-01-14 11:35',
                         text: 'Up for coffee? '
                     },
                     {
                         user:'responder',
-                        time: '2017-01-15',
+                        time: '2017-01-15 11:35',
                         text: 'sure '
                     }
                 ]
@@ -295,22 +295,22 @@ angular.module('merch', [])
                 "chatMasseges": [
                     {
                         user:'main',
-                        time: '2017-01-12',
+                        time: '2017-01-12 11:35',
                         text: 'Good to see yesterday'
                     },
                     {
                         user:'responder',
-                        time: '2017-01-13',
+                        time: '2017-01-13 11:35',
                         text: 'same here '
                     },
                     {
                         user:'main',
-                        time: '2017-01-14',
+                        time: '2017-01-14 11:35',
                         text: 'up for hike next week? '
                     },
                     {
                         user:'responder',
-                        time: '2017-01-15',
+                        time: '2017-01-15 11:35',
                         text: 'sure, how about Friday? '
                     }
                 ]
@@ -334,22 +334,22 @@ angular.module('merch', [])
                 "chatMasseges": [
                     {
                         user:'main',
-                        time: '2017-01-12',
+                        time: '2017-01-12 11:35',
                         text: 'Hi, how are you? '
                     },
                     {
                         user:'responder',
-                        time: '2017-01-13',
+                        time: '2017-01-13 11:35',
                         text: 'I am fine how about you? '
                     },
                     {
                         user:'main',
-                        time: '2017-01-14',
+                        time: '2017-01-14 11:35',
                         text: 'Up for coffee? '
                     },
                     {
                         user:'responder',
-                        time: '2017-01-15',
+                        time: '2017-01-15 11:35',
                         text: 'sure '
                     }
                 ]
@@ -373,22 +373,22 @@ angular.module('merch', [])
                 "chatMasseges": [
                     {
                         user:'main',
-                        time: '2017-01-12',
+                        time: '2017-01-12 11:35',
                         text: 'Good to see yesterday'
                     },
                     {
                         user:'responder',
-                        time: '2017-01-13',
+                        time: '2017-01-13 11:35',
                         text: 'same here '
                     },
                     {
                         user:'main',
-                        time: '2017-01-14',
+                        time: '2017-01-14 11:35',
                         text: 'up for hike next week? '
                     },
                     {
                         user:'responder',
-                        time: '2017-01-15',
+                        time: '2017-01-15 11:35',
                         text: 'sure, how about Friday? '
                     }
                 ]
@@ -412,22 +412,22 @@ angular.module('merch', [])
                 "chatMasseges": [
                     {
                         user:'main',
-                        time: '2017-01-12',
+                        time: '2017-01-12 11:35',
                         text: 'Hi, how are you? '
                     },
                     {
                         user:'responder',
-                        time: '2017-01-13',
+                        time: '2017-01-13 11:35',
                         text: 'I am fine how about you? '
                     },
                     {
                         user:'main',
-                        time: '2017-01-14',
+                        time: '2017-01-14 11:35',
                         text: 'Up for coffee? '
                     },
                     {
                         user:'responder',
-                        time: '2017-01-15',
+                        time: '2017-01-15 11:35',
                         text: 'sure '
                     }
                 ]
@@ -451,22 +451,22 @@ angular.module('merch', [])
                 "chatMasseges":[
                     {
                         user:'main',
-                        time: '2017-01-12',
+                        time: '2017-01-12 11:35',
                         text: 'Good to see yesterday'
                     },
                     {
                         user:'responder',
-                        time: '2017-01-13',
+                        time: '2017-01-13 11:35',
                         text: 'same here '
                     },
                     {
                         user:'main',
-                        time: '2017-01-14',
+                        time: '2017-01-14 11:35',
                         text: 'up for hike next week? '
                     },
                     {
                         user:'responder',
-                        time: '2017-01-15',
+                        time: '2017-01-15 11:35',
                         text: 'sure, how about Friday? '
                     }
                 ]
@@ -490,22 +490,22 @@ angular.module('merch', [])
                 "chatMasseges": [
                     {
                         user:'main',
-                        time: '2017-01-12',
+                        time: '2017-01-12 11:35',
                         text: 'Hi, how are you? '
                     },
                     {
                         user:'responder',
-                        time: '2017-01-13',
+                        time: '2017-01-13 11:35',
                         text: 'I am fine how about you? '
                     },
                     {
                         user:'main',
-                        time: '2017-01-14',
+                        time: '2017-01-14 11:35',
                         text: 'Up for coffee? '
                     },
                     {
                         user:'responder',
-                        time: '2017-01-15',
+                        time: '2017-01-15 11:35',
                         text: 'sure '
                     }
                 ]
@@ -529,22 +529,22 @@ angular.module('merch', [])
                 "chatMasseges": [
                     {
                         user:'main',
-                        time: '2017-01-12',
+                        time: '2017-01-12 11:35',
                         text: 'Good to see yesterday'
                     },
                     {
                         user:'responder',
-                        time: '2017-01-13',
+                        time: '2017-01-13 11:35',
                         text: 'same here '
                     },
                     {
                         user:'main',
-                        time: '2017-01-14',
+                        time: '2017-01-14 11:35',
                         text: 'up for hike next week? '
                     },
                     {
                         user:'responder',
-                        time: '2017-01-15',
+                        time: '2017-01-15 11:35',
                         text: 'sure, how about Friday? '
                     }
                 ]
@@ -568,22 +568,22 @@ angular.module('merch', [])
                 "chatMasseges": [
                     {
                         user:'main',
-                        time: '2017-01-12',
+                        time: '2017-01-12 11:35',
                         text: 'Hi, how are you? '
                     },
                     {
                         user:'responder',
-                        time: '2017-01-13',
+                        time: '2017-01-13 11:35',
                         text: 'I am fine how about you? '
                     },
                     {
                         user:'main',
-                        time: '2017-01-14',
+                        time: '2017-01-14 11:35',
                         text: 'Up for coffee? '
                     },
                     {
                         user:'responder',
-                        time: '2017-01-15',
+                        time: '2017-01-15 11:35',
                         text: 'sure '
                     }
                 ]
@@ -607,22 +607,22 @@ angular.module('merch', [])
                 "chatMasseges":[
                     {
                         user:'main',
-                        time: '2017-01-12',
+                        time: '2017-01-12 11:35',
                         text: 'Good to see yesterday'
                     },
                     {
                         user:'responder',
-                        time: '2017-01-13',
+                        time: '2017-01-13 11:35',
                         text: 'same here '
                     },
                     {
                         user:'main',
-                        time: '2017-01-14',
+                        time: '2017-01-14 11:35',
                         text: 'up for hike next week? '
                     },
                     {
                         user:'responder',
-                        time: '2017-01-15',
+                        time: '2017-01-15 11:35',
                         text: 'sure, how about Friday? '
                     }
                 ]
@@ -646,22 +646,22 @@ angular.module('merch', [])
                 "chatMasseges": [
                     {
                         user:'main',
-                        time: '2017-01-12',
+                        time: '2017-01-12 11:35',
                         text: 'Hi, how are you? '
                     },
                     {
                         user:'responder',
-                        time: '2017-01-13',
+                        time: '2017-01-13 11:35',
                         text: 'I am fine how about you? '
                     },
                     {
                         user:'main',
-                        time: '2017-01-14',
+                        time: '2017-01-14 11:35',
                         text: 'Up for coffee? '
                     },
                     {
                         user:'responder',
-                        time: '2017-01-15',
+                        time: '2017-01-15 11:35',
                         text: 'sure '
                     }
                 ]
@@ -685,22 +685,22 @@ angular.module('merch', [])
                 "chatMasseges": [
                     {
                         user:'main',
-                        time: '2017-01-12',
+                        time: '2017-01-12 11:35',
                         text: 'Good to see yesterday'
                     },
                     {
                         user:'responder',
-                        time: '2017-01-13',
+                        time: '2017-01-13 11:35',
                         text: 'same here '
                     },
                     {
                         user:'main',
-                        time: '2017-01-14',
+                        time: '2017-01-14 11:35',
                         text: 'up for hike next week? '
                     },
                     {
                         user:'responder',
-                        time: '2017-01-15',
+                        time: '2017-01-15 11:35',
                         text: 'sure, how about Friday? '
                     }
                 ]
@@ -724,22 +724,22 @@ angular.module('merch', [])
                 "chatMasseges": [
                     {
                         user:'main',
-                        time: '2017-01-12',
+                        time: '2017-01-12 11:35',
                         text: 'Hi, how are you? '
                     },
                     {
                         user:'responder',
-                        time: '2017-01-13',
+                        time: '2017-01-13 11:35',
                         text: 'I am fine how about you? '
                     },
                     {
                         user:'main',
-                        time: '2017-01-14',
+                        time: '2017-01-14 11:35',
                         text: 'Up for coffee? '
                     },
                     {
                         user:'responder',
-                        time: '2017-01-15',
+                        time: '2017-01-15 11:35',
                         text: 'sure '
                     }
                 ]
@@ -773,7 +773,10 @@ angular.module('merch', [])
             $scope.message = "";
             if(message.length > 0 ) {
                 var date = new Date();
+                var hr = date.getHours();
+                var min = date.getMinutes();
                 date = date.toISOString().slice(0, 10);
+                date = date + " " + hr + ":" + min;
                 var msg = {
                     user: 'main',
                     time: date,
