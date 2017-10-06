@@ -92,7 +92,7 @@
                 <div class="col-sm-4" style="border-right: 1px solid #439dbb; padding-right: 0px">
 
                     <!--chat lists-->
-                    <ul class="list-group" style="overflow-x: hidden;">
+                    <ul class="list-group" style="overflow-x: hidden; height: 82vh;">
                         <div class="chat-list">
                             <li ng-class="{active : activeId === chat.userId}" class="list-group-item desktop-chat-list row" ng-repeat="chat in data" ng-click="showChat(chat.userId)">
                             <div ng-click="setActive(chat.userId)">
@@ -150,8 +150,8 @@
                                 </div>
                             </div>
                             <div ng-repeat="msg in chat">
-                                <div ondrop="drop(event)" ondragover="allowDrop(event)" ng-if="msg.user === 'main'" class="triangle-right left">{{msg.time}} <br> {{msg.text}}</div>
-                                <div ng-if="msg.user === 'responder'" class="triangle-right right">{{msg.time}} <br> {{msg.text}}</div>
+                                <div ondrop="drop(event)" ondragover="allowDrop(event)" ng-if="msg.user === 'main'" class="triangle-right left">{{msg.text}}</div>
+                                <div ng-if="msg.user === 'responder'" class="triangle-right right">{{msg.text}}</div>
                             </div>
                         </div>
                         <!--Side image bar-->

@@ -1,4 +1,8 @@
 <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Merch App</title>
     <!--Scripts-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="./scripts/script.js"></script>
@@ -6,60 +10,58 @@
     <!--Style Sheets-->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/mobile.style.css">
     <title></title>
 </head>
 <body ng-app="merch">
     <div ng-controller="desktopCtrl">
-        <nav class="row navbar navbar-default">
+        <nav class="navbar navbar-default navbar-mob">
             <a class="pull-left" href="index.html">
                 <span class="glyphicon glyphicon-arrow-left"></span>
             </a>
         </nav>
 
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" class="chat-box">
-                <div class="chat-search row">
-                    <div class="col-sm-4 col-sm-push-4">
-                        <div id="custom-chat-search">
-                            <div class="input-group">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-info btn-lg" type="button">
-                                        <i class="glyphicon glyphicon-search"></i>
-                                    </button>
-                                </span>
-                                <input type="text" class="form-control input-sm" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div ondrop="drop(event)" ondragover="allowDrop(event)" class="col-sm-10 chat-box">
-                    <div ng-repeat="msg in chat">
-                        <div ng-if="msg.user === 'main'" class="triangle-right left">{{msg.time}} <br> {{msg.text}}</div>
-                        <div ng-if="msg.user === 'responder'" class="triangle-right right">{{msg.time}} <br> {{msg.text}}</div>
-                    </div>
+        <div ondrop="drop(event)" ondragover="allowDrop(event)" class="mobile-chat-box">
+            <div ondrop="drop(event)" ondragover="allowDrop(event)" class="mobile-chat-box">
+                <div ng-repeat="msg in chat">
+                    <div ng-if="msg.user === 'main'" class="triangle-right left" style="font-size: 23px;">{{msg.text}}</div>
+                    <div ng-if="msg.user === 'responder'" class="triangle-right right" style="font-size: 23px;">{{msg.text}}</div>
                 </div>
             </div>
+        </div>
+        <div class="input-bar jumbotron">
+            <div id="custom-chat-input">
+                <form class="input-group col-sm-12">
+                    <input id="chat" ng-model="message" type="text" class="form-control input-lg" placeholder="Click here to write something." />
+                    <span class="input-group-btn">
+                        <button id="sendMessage" ng-click="sendMessage(chatId, message)" class="btn btn-info btn-lg" type="submit">
+                            <i class="glyphicon glyphicon-edit"></i>
+                        </button>
+                    </span>
+                </form>
+            </div>
+        </div>
+
+
 
         <!--Side image bar-->
-        <!--<div class="container">-->
-            <!--<div class="jumbotron" style="overflow-x: scroll;">-->
-                    <!--<img id="a" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/57cc7d669fdc6b129215655281a0f9bc.png">-->
-                    <!--<img id="b" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/df197143ee4af5b5df056befe9ff6424.png">-->
-                    <!--<img id="c" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/7b8a79a2571bef94a3dd251a3b606c2b.png">-->
-                    <!--<img id="d" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/88f817e02e55c23c8ae886aaec8c9e73.png">-->
-                    <!--<img id="e" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/9db084f88b83df8ae0b9c5fb309a3e0f.png">-->
-                    <!--<img id="f" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/57cc7d669fdc6b129215655281a0f9bc.png">-->
-                    <!--<img id="g" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/df197143ee4af5b5df056befe9ff6424.png">-->
-                    <!--<img id="h" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/7b8a79a2571bef94a3dd251a3b606c2b.png">-->
-                    <!--<img id="i" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/57cc7d669fdc6b129215655281a0f9bc.png">-->
-                    <!--<img id="j" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/df197143ee4af5b5df056befe9ff6424.png">-->
-                    <!--<img id="k" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/7b8a79a2571bef94a3dd251a3b606c2b.png">-->
-                    <!--<img id="l" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/88f817e02e55c23c8ae886aaec8c9e73.png">-->
-                    <!--<img id="m" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/9db084f88b83df8ae0b9c5fb309a3e0f.png">-->
-                    <!--<img id="n" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/57cc7d669fdc6b129215655281a0f9bc.png">-->
-                    <!--<img id="o" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/df197143ee4af5b5df056befe9ff6424.png">-->
-                    <!--<img id="p" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/7b8a79a2571bef94a3dd251a3b606c2b.png">-->
-            <!--</div>-->
-        <!--</div>-->
+            <div class="scrollmenu" style="overflow-x: scroll; overflow-y: hidden;">
+                <img id="a" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/miss-you.png">
+                <img id="b" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/thank-you.png">
+                <img id="c" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/feedback.png">
+                <img id="d" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/earn-reward.png">
+                <img id="e" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/speaker.png">
+                <img id="f" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/miss-you.png">
+                <img id="g" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/thank-you.png">
+                <img id="h" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/feedback.png">
+                <img id="i" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/earn-reward.png">
+                <img id="j" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/speaker.png">
+                <img id="k" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/miss-you.png">
+                <img id="l" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/thank-you.png">
+                <img id="m" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/feedback.png">
+                <img id="n" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/earn-reward.png">
+                <img id="o" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/speaker.png">
+            </div>
     </div>
 
 </body>

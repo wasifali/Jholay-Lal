@@ -25,9 +25,8 @@ html{
 }
 
 .chat-box{
-    max-height: 90vh;
+    max-height: 72vh;
     overflow-y: scroll;
-    padding-bottom: 20px;
 }
 
 i{
@@ -38,6 +37,7 @@ i{
 
     margin-bottom: 0;
     background : #B1D9E7;
+    opacity: 0.6;
 }
 
 .top-nav{
@@ -94,14 +94,17 @@ li{
 
 .active {
     background : #B1D9E7;
+    opacity: 0.3;
 }
 
 .active:active {
     background : #B1D9E7;
+    opacity: 0.3;
 }
 
 .jumbotron{
     background-color:#B1D9E7 !important;
+    opacity: 0.3;
     border-top: 1px solid lightgray;
     padding-left: 5%;
     padding-right: 14%;
@@ -124,7 +127,8 @@ li{
 .images-bar{
     text-align: center;
     background-color: #B1D9E7;
-    height: 90vh;
+    opacity: 0.3;
+    height: 72vh;
     overflow-y: scroll;
     border-left: 1px solid lightgrey ;
 }
@@ -133,6 +137,7 @@ li{
     z-index: 2;
     color: black;
     background-color: #B1D9E7;
+    opacity: 0.3;
     border-color: #B1D9E7;
 }
 
@@ -185,6 +190,7 @@ li{
     width: 32px;
     height: 32px;
     background-color: #b1d9e7;
+    opacity: 0.3;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
     border-radius: 25px;
     border: 1px solid #00000F;
