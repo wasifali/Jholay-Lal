@@ -26,8 +26,10 @@ html{
 
 .chat-box{
     max-height: 72vh;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
+
+.chat-box::-webkit-scrollbar {display:none;}
 
 i{
     color: #8D8D8D;
@@ -86,6 +88,8 @@ li{
     overflow-x: hidden;
 }
 
+.chat-list::-webkit-scrollbar {display:none;}
+
 .progress {
     margin-bottom: 0 !important;
     height: 12px;
@@ -130,8 +134,11 @@ li{
     opacity: 0.7;
     height: 72vh;
     overflow-y: scroll;
+
     border-left: 1px solid lightgrey ;
 }
+
+.images-bar::-webkit-scrollbar {display:none;}
 
 .desktop-chat-list.active, .desktop-chat-list.active:hover{
     z-index: 2;
