@@ -20,11 +20,17 @@
 }
 
 div.scrollmenu {
+    border-top: 1px solid black;
     background-color: #B1D9E7;
     overflow: auto;
     white-space: nowrap;
-    height: 13vh;
+    height: 17vh;
     padding-top: 2%;
+}
+
+div.scrollmenu img {
+    margin-right: 3px;
+    margin-left: 3px;
 }
 
 .jumbotron {
