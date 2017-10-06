@@ -1,20 +1,21 @@
 .mobile-chat-box{
-    height: 64vh;
+    height: 60vh;
     overflow-y: scroll;
     margin-right: 5px;
+    background-color: white;
 }
 
 .navbar-mob{
      margin-bottom: 0;
      background : #B1D9E7;
-     height: 80px !important;
+     height: 60px !important;
      padding-left: 3%;
      padding-top: 3%;
      padding-right: 3%;
  }
 
 .glyphicon{
-    font-size: 50px;
+    font-size: 30px;
     color: black;
 }
 
