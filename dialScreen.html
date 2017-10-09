@@ -1,0 +1,63 @@
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Merch App</title>
+    <!--Scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="./scripts/script.js"></script>
+
+    <!--Style Sheets-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/mobile.style.css">
+    <title></title>
+</head>
+<body ng-app="merch">
+<div ng-controller="desktopCtrl">
+    <nav class="navbar navbar-default navbar-mob">
+        <a class="pull-left" href="index.html">
+            <span class="glyphicon glyphicon-arrow-left"></span>
+        </a>
+    </nav>
+
+        <div class="row">
+            <div class="row dialScreen dial-heading">
+                Xxxxxxx xxxxxxx xxxxxxxx
+            </div>
+            <div class="row dialScreen">
+                <div ng-if="number.length" class="dial-heading">
+                    {{number}}
+                </div>
+                <div ng-if="!number.length">
+                    <img class="dial-grey" src="http://www.iconsdb.com/icons/preview/gray/circle-xxl.png">
+                    <img class="dial-grey" src="http://www.iconsdb.com/icons/preview/gray/circle-xxl.png">
+                    <img class="dial-grey" src="http://www.iconsdb.com/icons/preview/gray/circle-xxl.png">
+                    <img class="dial-grey" src="http://www.iconsdb.com/icons/preview/gray/circle-xxl.png">
+                    <img class="dial-grey" src="http://www.iconsdb.com/icons/preview/gray/circle-xxl.png">
+                    <img class="dial-grey" src="http://www.iconsdb.com/icons/preview/gray/circle-xxl.png">
+                </div>
+            </div>
+            <div class="row dialScreen">
+                <img ng-click="dialNumber(1)" id="1" class="dial-thumb" src="assets/1.png">
+                <img ng-click="dialNumber(2)" id="2" class="dial-thumb" src="assets/2.png">
+                <img ng-click="dialNumber(3)" id="3" class="dial-thumb" src="assets/3.png">
+            </div>
+            <div class="row dialScreen">
+                <img ng-click="dialNumber(4)" id="4" class="dial-thumb" src="assets/4.png">
+                <img ng-click="dialNumber(5)" id="5" class="dial-thumb" src="assets/5.png">
+                <img ng-click="dialNumber(6)" id="6" class="dial-thumb" src="assets/6.png">
+            </div>
+            <div class="row dialScreen">
+                <img ng-click="dialNumber(7)" id="7" class="dial-thumb" src="assets/7.png">
+                <img ng-click="dialNumber(8)" id="8" class="dial-thumb" src="assets/8.png">
+                <img ng-click="dialNumber(9)" id="9" class="dial-thumb" src="assets/9.png">
+            </div>
+            <div class="row dialScreen">
+                <img ng-click="dialNumber(0)" id="0" class="dial-thumb" src="assets/0.png">
+            </div>
+        </div>
+
+</div>
+
+</body>

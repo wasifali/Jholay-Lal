@@ -1,6 +1,37 @@
 angular.module('merch', [])
 
     .controller('desktopCtrl', ['$scope', function ($scope) {
+
+        $scope.chatScreen = true;
+        $scope.dialScreen = false;
+        $scope.filterScreen = false;
+        $scope.rotationScreen = false;
+
+        $scope.number = [];
+
+        $scope.menuChoice = function(val){
+            if(val === 1){
+                $scope.dialScreen = false;
+                $scope.filterScreen = false;
+                $scope.rotationScreen = false;
+                $scope.chatScreen = true;
+            }
+            else if (val === 3){
+                $scope.filterScreen = false;
+                $scope.rotationScreen = false;
+                $scope.chatScreen = false;
+                $scope.dialScreen = true;
+            }
+
+
+        }
+
+        $scope.dialNumber = function(val){
+            if($scope.number.length < 6) {
+                $scope.number.push(val);
+            }
+        }
+
         $scope.data = [
             {
                 "userId": "12345",
@@ -19,6 +50,46 @@ angular.module('merch', [])
                 "amount4": "$10,234 ",
                 "action_text": "Action1 Action1 Action1",
                 "chatMasseges": [
+                    {
+                        user:'main',
+                        time: '2017-01-12 11:35',
+                        text: 'Hi, how are you? '
+                    },
+                    {
+                        user:'responder',
+                        time: '2017-01-13 11:35',
+                        text: 'I am fine how about you? '
+                    },
+                    {
+                        user:'main',
+                        time: '2017-01-14 11:35',
+                        text: 'Up for coffee? '
+                    },
+                    {
+                        user:'responder',
+                        time: '2017-01-15 11:35',
+                        text: 'sure '
+                    },
+                    {
+                        user:'main',
+                        time: '2017-01-12 11:35',
+                        text: 'Hi, how are you? '
+                    },
+                    {
+                        user:'responder',
+                        time: '2017-01-13 11:35',
+                        text: 'I am fine how about you? '
+                    },
+                    {
+                        user:'main',
+                        time: '2017-01-14 11:35',
+                        text: 'Up for coffee? '
+                    },
+                    {
+                        user:'responder',
+                        time: '2017-01-15 11:35',
+                        text: 'sure '
+                    },
                     {
                         user:'main',
                         time: '2017-01-12 11:35',
@@ -788,10 +859,6 @@ angular.module('merch', [])
                         $scope.data[i].chatMasseges.push(msg);
                     }
                 }
-                var old = $location.hash();
-                $location.hash(id);
-                $anchorScroll();
-                $location.hash(old);
             }
 
         }

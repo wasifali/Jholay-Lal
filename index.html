@@ -7,41 +7,59 @@
 
         <!--Scripts-->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script
+                src="https://code.jquery.com/jquery-3.2.1.min.js"
+                integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+                crossorigin="anonymous"></script>
         <script src="./scripts/script.js"></script>
 
         <!--Drag and drop images-->
 
         <script>
-//            var inputBox = document.getElementById("chat");
-//            inputBox.val("");
-//            inputBox.addEventListener("keyup", function(event) {
-//                        event.preventDefault();
-//                        if (event.keyCode == 13) {
-//                            document.getElementById("sendMessage").click();
-//                        }
-//                    });
+                var allowDrop;
+                var drag;
+                var scroll;
 
-            function allowDrop(ev) {
-                ev.preventDefault();
-            }
+                $(document).ready(function() {
 
-            function drag(ev) {
-                ev.dataTransfer.setData("text", ev.target.id);
-            }
+//                    window.setInterval(function() {
+////                        console.log(document.getElementById('msg-container').offsetHeight);
+//                        $('#msg-container').animate({scrollTop: document.getElementById('msg-container').offsetHeight});
+//                    }, 500);
 
-            function drop(ev) {
+                    scroll = function () {
+                        var len = $( "#msg-container .row:last-child").length;
+                        $('#msg-container').animate({scrollTop: $( "#msg-container .row:last-child")[len-1].offset().top});
+//                        $('#msg-container .triangle-right:last-child')
+//                        $('#msg-container').animate({scrollTop: $('#msg-container .triangle-right:last-child').offset().top});
+//                            var elem = document.getElementsByClassName('triangle-right');
+//                            console.log(elem.length);
+//                            elem[elem.length - 1].scrollTop = elem.scrollHeight;
+                    }
 
-                var div = document.createElement("div");
-                ev.target.appendChild(div);
-                ev.preventDefault();
-                var data = ev.dataTransfer.getData("text");
-                var image = document.getElementById(data);
-                var elem = document.createElement("img");
-                elem.setAttribute("src", image.src);
-                elem.setAttribute("class", "thumb");
-                elem.style.cssText = 'margin-top: 80px;margin-left: 30px;';
-                div.appendChild(elem);
-            }
+                    allowDrop = function (ev) {
+                        ev.preventDefault();
+                    }
+
+                    drag = function (ev) {
+                        ev.dataTransfer.setData("text", ev.target.id);
+                    }
+
+                    drop = function (ev) {
+
+                        var div = document.createElement("div");
+                        ev.target.appendChild(div);
+                        ev.preventDefault();
+                        var data = ev.dataTransfer.getData("text");
+                        var image = document.getElementById(data);
+                        var elem = document.createElement("img");
+                        elem.setAttribute("src", image.src);
+                        elem.setAttribute("class", "thumb");
+                        elem.style.cssText = 'margin-top: 80px;margin-left: 30px;';
+                        div.appendChild(elem);
+                    }
+                });
+
         </script>
 
         <!--Style Sheets-->
@@ -75,17 +93,17 @@
                     <div class="row ">
                         <div class="col-sm-3"></div>
                         <div class="col-sm-9 top-img-nav">
-                            <a href="#">
-                                <img class="active-img nav-images" src="assets/chat-icon.png">
+                            <a ng-click="menuChoice(1)">
+                                <img ng-class="{active-img : chatScreen}" class="nav-images" src="assets/chat-icon.png">
                             </a>
-                            <a href="#">
-                                <img class="nav-images" src="assets/filter.png">
+                            <a ng-click="menuChoice(2)">
+                                <img ng-class="{active-img : filterScreen}" class="nav-images" src="assets/filter.png">
                             </a>
-                            <a href="#">
-                                <img class="nav-images" src="assets/dial.png">
+                            <a ng-click="menuChoice(3)">
+                                <img ng-class="{active-img : dialScreen}" class="nav-images" src="assets/dial.png">
                             </a>
-                            <a href="#">
-                                <img class="nav-images" src="assets/rotation.png">
+                            <a ng-click="menuChoice(4)">
+                                <img ng-class="{active-img : rotationScreen}" class="nav-images" src="assets/rotation.png">
                             </a>
                         </div>
                     </div>
@@ -138,7 +156,9 @@
 
                     <!--Chat box-->
                     <div class="row">
-                        <div class="col-sm-10 chat-box" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                        <!--Messages Screen-->
+                        <div ng-if="chatScreen" class="col-sm-10 chat-box" ondrop="drop(event)" ondragover="allowDrop(event)">
                             <div class="chat-search row">
                                 <div class="col-sm-4 col-sm-push-4">
                                     <div id="custom-chat-search">
@@ -153,72 +173,116 @@
                                     </div>
                                 </div>
                             </div>
-                            <div ng-repeat="msg in chat">
-                                <div class="row">
-                                    <span ng-if="msg.user === 'main'" style="margin-left: 25px;" class="left">{{msg.time}}</span>
-                                    <span ng-if="msg.user === 'responder'" class="right">{{msg.time}}</span>
-                                    <div ng-if="msg.user === 'main'" class="triangle-right left">{{msg.text}}</div>
-                                    <div ng-if="msg.user === 'responder'" class="triangle-right right">{{msg.text}}</div>
+                            <div id="msg-container">
+                                <div ng-repeat="msg in chat">
+                                    <div class="row check">
+                                        <span ng-if="msg.user === 'main'" style="margin-left: 25px;" class="left">{{msg.time}}</span>
+                                        <span ng-if="msg.user === 'responder'" class="right">{{msg.time}}</span>
+                                        <div ng-if="msg.user === 'main'" class="triangle-right left">{{msg.text}}</div>
+                                        <div ng-if="msg.user === 'responder'" class="triangle-right right">{{msg.text}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Dial Screen-->
+                        <div ng-if="dialScreen" class="col-sm-10">
+                            <div class="row">
+                                <div class="row dialScreen dial-heading">
+                                        Xxxxxxx xxxxxxx xxxxxxxx
+                                </div>
+                                <div class="row dialScreen">
+                                    <div ng-if="number.length" class="dial-heading">
+                                        {{number}}
+                                    </div>
+                                    <div ng-if="!number.length">
+                                        <img class="dial-grey" src="http://www.iconsdb.com/icons/preview/gray/circle-xxl.png">
+                                        <img class="dial-grey" src="http://www.iconsdb.com/icons/preview/gray/circle-xxl.png">
+                                        <img class="dial-grey" src="http://www.iconsdb.com/icons/preview/gray/circle-xxl.png">
+                                        <img class="dial-grey" src="http://www.iconsdb.com/icons/preview/gray/circle-xxl.png">
+                                        <img class="dial-grey" src="http://www.iconsdb.com/icons/preview/gray/circle-xxl.png">
+                                        <img class="dial-grey" src="http://www.iconsdb.com/icons/preview/gray/circle-xxl.png">
+                                    </div>
+                                </div>
+                                <div class="row dialScreen">
+                                    <img ng-click="dialNumber(1)" id="1" class="dial-thumb" src="assets/1.png">
+                                    <img ng-click="dialNumber(2)" id="2" class="dial-thumb" src="assets/2.png">
+                                    <img ng-click="dialNumber(3)" id="3" class="dial-thumb" src="assets/3.png">
+                                </div>
+                                <div class="row dialScreen">
+                                    <img ng-click="dialNumber(4)" id="4" class="dial-thumb" src="assets/4.png">
+                                    <img ng-click="dialNumber(5)" id="5" class="dial-thumb" src="assets/5.png">
+                                    <img ng-click="dialNumber(6)" id="6" class="dial-thumb" src="assets/6.png">
+                                </div>
+                                <div class="row dialScreen">
+                                    <img ng-click="dialNumber(7)" id="7" class="dial-thumb" src="assets/7.png">
+                                    <img ng-click="dialNumber(8)" id="8" class="dial-thumb" src="assets/8.png">
+                                    <img ng-click="dialNumber(9)" id="9" class="dial-thumb" src="assets/9.png">
+                                </div>
+                                <div class="row dialScreen">
+                                    <img ng-click="dialNumber(0)" id="0" class="dial-thumb" src="assets/0.png">
                                 </div>
                             </div>
                         </div>
                         <!--Side image bar-->
                         <div ondrop="drop(null)" ondragover="allowDrop(null)" class="col-sm-2">
                             <div class="images-bar">
-                                <div>
-                                    <img id="a" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/miss-you.png">
-                                </div>
-                                <div >
-                                    <img id="b" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/thank-you.png">
-                                </div>
-                                <div >
-                                    <img id="c" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/feedback.png">
-                                </div>
-                                <div >
-                                    <img id="d" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/earn-reward.png">
-                                </div>
-                                <div >
-                                    <img id="e" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/speaker.png">
-                                </div>
-                                <div>
-                                    <img id="f" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/miss-you.png">
-                                </div>
-                                <div >
-                                    <img id="g" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/thank-you.png">
-                                </div>
-                                <div >
-                                    <img id="h" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/feedback.png">
-                                </div>
-                                <div >
-                                    <img id="i" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/earn-reward.png">
-                                </div>
-                                <div >
-                                    <img id="j" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/speaker.png">
-                                </div>
-                                <div>
-                                    <img id="k" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/miss-you.png">
-                                </div>
-                                <div >
-                                    <img id="l" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/thank-you.png">
-                                </div>
-                                <div >
-                                    <img id="m" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/feedback.png">
-                                </div>
-                                <div >
-                                    <img id="n" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/earn-reward.png">
-                                </div>
-                                <div >
-                                    <img id="o" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/speaker.png">
+                                <div ng-if="chatScreen">
+                                    <div>
+                                        <img id="a" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/miss-you.png">
+                                    </div>
+                                    <div >
+                                        <img id="b" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/thank-you.png">
+                                    </div>
+                                    <div >
+                                        <img id="c" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/feedback.png">
+                                    </div>
+                                    <div >
+                                        <img id="d" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/earn-reward.png">
+                                    </div>
+                                    <div >
+                                        <img id="e" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/speaker.png">
+                                    </div>
+                                    <div>
+                                        <img id="f" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/miss-you.png">
+                                    </div>
+                                    <div >
+                                        <img id="g" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/thank-you.png">
+                                    </div>
+                                    <div >
+                                        <img id="h" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/feedback.png">
+                                    </div>
+                                    <div >
+                                        <img id="i" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/earn-reward.png">
+                                    </div>
+                                    <div >
+                                        <img id="j" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/speaker.png">
+                                    </div>
+                                    <div>
+                                        <img id="k" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/miss-you.png">
+                                    </div>
+                                    <div >
+                                        <img id="l" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/thank-you.png">
+                                    </div>
+                                    <div >
+                                        <img id="m" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/feedback.png">
+                                    </div>
+                                    <div >
+                                        <img id="n" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/earn-reward.png">
+                                    </div>
+                                    <div >
+                                        <img id="o" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/speaker.png">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="input-bar jumbotron">
+                    <div ng-if="chatScreen" class="input-bar jumbotron">
                         <div id="custom-chat-input">
                             <form class="input-group col-sm-12">
                                 <input id="chat" ng-model="message" type="text" class="form-control input-lg" placeholder="Click here to write something." />
                                 <span class="input-group-btn">
-                                    <button id="sendMessage" ng-click="sendMessage(chatId, message)" class="btn btn-info btn-lg" type="submit">
+                                    <button onclick="scroll()" id="sendMessage" ng-click="sendMessage(chatId, message)" class="btn btn-info btn-lg" type="submit">
                                         <i class="glyphicon glyphicon-edit"></i>
                                     </button>
                                 </span>
@@ -233,8 +297,11 @@
         <div ng-controller="desktopCtrl" class="hidden-sm hidden-md hidden-lg hidden-xl">
             <nav class="container navbar navbar-default">
                 <h4 class="pull-left">Xxxx</h4>
-                <div class="pull-right">
-                    <div class="container">
+                <div class="row pull-right">
+                    <a class="col-xs-4" href="dialScreen.html">
+                        <img class="dial-icon" src="assets/dial.png">
+                    </a>
+                    <div class="col-xs-8 container">
                         <div class="row">
                             <div class="col-md-4 col-md-offset-3">
                                 <form action="" class="search-form">
