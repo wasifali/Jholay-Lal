@@ -1,6 +1,37 @@
 angular.module('merch', [])
 
     .controller('desktopCtrl', ['$scope', function ($scope) {
+
+        $scope.chatScreen = true;
+        $scope.dialScreen = false;
+        $scope.filterScreen = false;
+        $scope.rotationScreen = false;
+
+        $scope.number = [];
+
+        $scope.menuChoice = function(val){
+            if(val === 1){
+                $scope.dialScreen = false;
+                $scope.filterScreen = false;
+                $scope.rotationScreen = false;
+                $scope.chatScreen = true;
+            }
+            else if (val === 3){
+                $scope.filterScreen = false;
+                $scope.rotationScreen = false;
+                $scope.chatScreen = false;
+                $scope.dialScreen = true;
+            }
+
+
+        }
+
+        $scope.dialNumber = function(val){
+            if($scope.number.length < 6) {
+                $scope.number.push(val);
+            }
+        }
+
         $scope.data = [
             {
                 "userId": "12345",
@@ -38,7 +69,6 @@ angular.module('merch', [])
                         user:'responder',
                         time: '2017-01-15 11:35',
                         text: 'sure '
-<<<<<<< HEAD
                     },
                     {
                         user:'main',
@@ -80,10 +110,6 @@ angular.module('merch', [])
                         time: '2017-01-15 11:35',
                         text: 'sure '
                     }
-
-=======
-                    }
->>>>>>> f400a0423c90746c6f4aec5e031ddbb6b776aa33
                 ]
             },
             {
@@ -840,7 +866,7 @@ angular.module('merch', [])
             }
             setTimeout(function() {
                 console.log("funki Called");
-                var objDiv = document.getElementById("lol");
+                var objDiv = document.getElementById("chatbox");
                 objDiv.scrollTop = (objDiv.scrollHeight);
             }, 50)
         }
