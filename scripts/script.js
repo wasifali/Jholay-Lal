@@ -38,6 +38,7 @@ angular.module('merch', [])
                         user:'responder',
                         time: '2017-01-15 11:35',
                         text: 'sure '
+<<<<<<< HEAD
                     },
                     {
                         user:'main',
@@ -80,6 +81,9 @@ angular.module('merch', [])
                         text: 'sure '
                     }
 
+=======
+                    }
+>>>>>>> f400a0423c90746c6f4aec5e031ddbb6b776aa33
                 ]
             },
             {
