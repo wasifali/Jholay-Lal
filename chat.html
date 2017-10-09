@@ -1,0 +1,69 @@
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Merch App</title>
+    <!--Scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="./scripts/script.js"></script>
+
+    <!--Style Sheets-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/mobile.style.css">
+    <title></title>
+</head>
+<body ng-app="merch">
+    <div ng-controller="desktopCtrl">
+        <nav class="navbar navbar-default navbar-mob">
+            <a class="pull-left" href="index.html">
+                <span class="glyphicon glyphicon-arrow-left"></span>
+            </a>
+        </nav>
+
+        <div ondrop="drop(event)" ondragover="allowDrop(event)" class="mobile-chat-box">
+            <div ondrop="drop(event)" ondragover="allowDrop(event)" class="mobile-chat-box">
+                <div ng-repeat="msg in chat">
+                    <span ng-if="msg.user === 'main'" style="margin-left: 25px;" class="left">{{msg.time}}</span>
+                    <span ng-if="msg.user === 'responder'" class="right">{{msg.time}}</span>
+                    <div ng-if="msg.user === 'main'" class="triangle-right left" style="font-size: 18px;">{{msg.text}}</div>
+                    <div ng-if="msg.user === 'responder'" class="triangle-right right" style="font-size: 18px;">{{msg.text}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="input-bar jumbotron">
+            <div id="custom-chat-input">
+                <form class="input-group col-sm-12">
+                    <input id="chat" ng-model="message" type="text" class="form-control input-lg" placeholder="Type Message" />
+                    <span class="input-group-btn">
+                        <button id="sendMessage" ng-click="sendMessage(chatId, message)" class="btn btn-info btn-lg" type="submit">
+                            <strong><span style="color: #8D74B1; font-size: 20px;">Send</span></strong>
+                        </button>
+                    </span>
+                </form>
+            </div>
+        </div>
+
+
+
+        <!--Side image bar-->
+            <div class="scrollmenu" style="overflow-x: scroll; overflow-y: hidden;">
+                <img id="a" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/miss-you.png">
+                <img id="b" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/thank-you.png">
+                <img id="c" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/feedback.png">
+                <img id="d" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/earn-reward.png">
+                <img id="e" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/speaker.png">
+                <img id="f" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/miss-you.png">
+                <img id="g" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/thank-you.png">
+                <img id="h" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/feedback.png">
+                <img id="i" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/earn-reward.png">
+                <img id="j" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/speaker.png">
+                <img id="k" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/miss-you.png">
+                <img id="l" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/thank-you.png">
+                <img id="m" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/feedback.png">
+                <img id="n" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/earn-reward.png">
+                <img id="o" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/speaker.png">
+            </div>
+    </div>
+
+</body>

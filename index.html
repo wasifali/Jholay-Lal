@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Merch App</title>
+
+        <!--Scripts-->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script src="./scripts/script.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+
+        <!--Drag and drop images-->
+
+        <script>
+            $(document).ready(function() {
+                var objDiv = document.getElementById("lol");
+                objDiv.scrollTop = objDiv.scrollHeight;
+            });
+//            var inputBox = document.getElementById("chat");
+//            inputBox.val("");
+//            inputBox.addEventListener("keyup", function(event) {
+//                        event.preventDefault();
+//                        if (event.keyCode == 13) {
+//                            document.getElementById("sendMessage").click();
+//                        }
+//                    });
+
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+
+            function drag(ev) {
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+
+            function drop(ev) {
+
+                var div = document.createElement("div");
+                ev.target.appendChild(div);
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                var image = document.getElementById(data);
+                var elem = document.createElement("img");
+                elem.setAttribute("src", image.src);
+                elem.setAttribute("class", "thumb");
+                elem.style.cssText = 'margin-top: 80px;margin-left: 30px;';
+                div.appendChild(elem);
+            }
+        </script>
+
+        <!--Style Sheets-->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="./styles/styles.css">
+
+    </head>
+    <body ng-app="merch">
+        <!--DESKTOP VIEWS-->
+        <div ng-controller="desktopCtrl" class="hidden-xs">
+            <div class="row top-nav">
+                <div class="col-sm-4" style="border-right: 1px solid #439dbb;">
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-10">
+                            <h3><strong>Abcd Efghi Lmno</strong></h3>
+                            <div id="custom-search-input">
+                                <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-info btn-lg" type="button">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </span>
+                                    <input type="text" class="form-control input-sm" placeholder="User" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="row ">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-9 top-img-nav">
+                            <a href="#">
+                                <img class="active-img nav-images" src="assets/chat-icon.png">
+                            </a>
+                            <a href="#">
+                                <img class="nav-images" src="assets/filter.png">
+                            </a>
+                            <a href="#">
+                                <img class="nav-images" src="assets/dial.png">
+                            </a>
+                            <a href="#">
+                                <img class="nav-images" src="assets/rotation.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4" style="border-right: 1px solid #439dbb; padding-right: 0px">
+
+                    <!--chat lists-->
+                    <ul class="list-group" style="overflow-x: hidden; height: 82vh;">
+                        <div class="chat-list">
+                            <li ng-class="{active : activeId === chat.userId}" class="list-group-item desktop-chat-list row" ng-repeat="chat in data" ng-click="showChat(chat.userId)">
+                            <div ng-click="setActive(chat.userId)">
+                            <div class="col-sm-3">
+                                <img class="img-responsive" src="assets/{{chat.state}}">
+                            </div>
+                            <div class="chat-sub col-sm-9">
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <div class="row">
+                                                <p><i class="desktop-font">Xxxxx</i> <span style="color: #8D8D8D; font-size: 15px;">{{chat.userId}}</span></p>
+                                            </div>
+                                            <div class="row">
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{chat.score}}" aria-valuemin="0" aria-valuemax="100" style="width: {{chat.score}}%">
+                                                        <span class="sr-only"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row marg">
+                                                <p><span class="date">{{chat.last_date}}</span>   <i class="desktop-font" style="font-size: 13px;">xxxxx xxxx</i></p>
+                                                <p><span class="date">{{chat.amount}}</span>   <i class="desktop-font">xxxxx xxxxx   {{chat.first_date}}</i></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4" style="margin-top: 25px; text-align: center;">
+                                            <img class="chat-list-img" src="assets/{{chat.activity}}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        </div>
+                    </ul>
+
+                </div>
+
+
+                <div class="col-sm-8" style="padding-left: 0px">
+
+                    <!--Chat box-->
+                    <div class="row">
+                        <div id="lol" class="col-sm-10 chat-box" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <div class="chat-search row">
+                                <div class="col-sm-4 col-sm-push-4">
+                                    <div id="custom-chat-search">
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-info btn-lg" type="button">
+                                                    <i class="glyphicon glyphicon-search"></i>
+                                                </button>
+                                            </span>
+                                            <input type="text" class="form-control input-sm" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div ng-repeat="msg in chat">
+                                <div class="row">
+                                    <span ng-if="msg.user === 'main'" style="margin-left: 25px;" class="left">{{msg.time}}</span>
+                                    <span ng-if="msg.user === 'responder'" class="right">{{msg.time}}</span>
+                                    <div ng-if="msg.user === 'main'" class="triangle-right left">{{msg.text}}</div>
+                                    <div ng-if="msg.user === 'responder'" class="triangle-right right">{{msg.text}}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Side image bar-->
+                        <div ondrop="drop(null)" ondragover="allowDrop(null)" class="col-sm-2">
+                            <div class="images-bar">
+                                <div>
+                                    <img id="a" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/miss-you.png">
+                                </div>
+                                <div >
+                                    <img id="b" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/thank-you.png">
+                                </div>
+                                <div >
+                                    <img id="c" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/feedback.png">
+                                </div>
+                                <div >
+                                    <img id="d" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/earn-reward.png">
+                                </div>
+                                <div >
+                                    <img id="e" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/speaker.png">
+                                </div>
+                                <div>
+                                    <img id="f" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/miss-you.png">
+                                </div>
+                                <div >
+                                    <img id="g" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/thank-you.png">
+                                </div>
+                                <div >
+                                    <img id="h" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/feedback.png">
+                                </div>
+                                <div >
+                                    <img id="i" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/earn-reward.png">
+                                </div>
+                                <div >
+                                    <img id="j" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/speaker.png">
+                                </div>
+                                <div>
+                                    <img id="k" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/miss-you.png">
+                                </div>
+                                <div >
+                                    <img id="l" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/thank-you.png">
+                                </div>
+                                <div >
+                                    <img id="m" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/feedback.png">
+                                </div>
+                                <div >
+                                    <img id="n" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/earn-reward.png">
+                                </div>
+                                <div >
+                                    <img id="o" draggable="true" ondragstart="drag(event)" class="thumb" src="assets/speaker.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-bar jumbotron">
+                        <div id="custom-chat-input">
+                            <form class="input-group col-sm-12">
+                                <input id="chat" ng-model="message" type="text" class="form-control input-lg" placeholder="Click here to write something." />
+                                <span class="input-group-btn">
+                                    <button id="sendMessage" ng-click="sendMessage(chatId, message)" class="btn btn-info btn-lg" type="submit">
+                                        <i class="glyphicon glyphicon-edit"></i>
+                                    </button>
+                                </span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--MOBILE VIEWS-->
+        <div ng-controller="desktopCtrl" class="hidden-sm hidden-md hidden-lg hidden-xl">
+            <nav class="container navbar navbar-default">
+                <h4 class="pull-left">Xxxx</h4>
+                <div class="pull-right">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4 col-md-offset-3">
+                                <form action="" class="search-form">
+                                    <div class="form-group has-feedback">
+                                        <label for="search" class="sr-only">User</label>
+                                        <input type="text" class="form-control" name="search" id="search" placeholder="search">
+                                        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <ul class="list-group" style="overflow-x: hidden;">
+                <div class="chat-list">
+                    <a href="chat.html">
+                    <li class="list-group-item row" ng-repeat="chat in data" ng-click="showChat(chat.userId)">
+                        <div class="col-xs-3">
+                            <img class="img-responsive" src="assets/{{chat.state}}">
+                        </div>
+                        <div class="chat-sub col-xs-9">
+                            <div class="row">
+                                <div class="col-xs-8">
+                                    <div class="row">
+                                        <p class="grey"><i>Xxxxx</i> <span style="color: #8D8D8D; font-size: 15px;">{{chat.userId}}</span></p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{chat.score}}" aria-valuemin="0" aria-valuemax="100" style="width: {{chat.score}}%">
+                                                <span class="sr-only"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row marg">
+                                        <p><span>{{chat.last_date}}</span>   <i style="font-size: 13px;">(xxxxx xxxxxxxx)</i></p>
+                                        <p><span>{{chat.amount}}</span>   <i>xxxxx xxxxx   {{chat.first_date}}</i></p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4" style="margin-top: 25px; text-align: center;">
+                                    <img class="chat-list-img" src="assets/{{chat.activity}}">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    </a>
+                </div>
+            </ul>
+
+        </div>
+    </body>
+
+</html>
