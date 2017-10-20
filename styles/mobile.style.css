@@ -61,6 +61,10 @@ h6{
     font-size: 11px !important;
 }
 
+#myRange{
+    width: 90% !important;
+    margin-top: 20px;
+}
 
 .sort-mobile{
     width: 74px;
@@ -90,40 +94,4 @@ hr{
 
 #demo-slider-tooltip .slider-track-high {
     background: #2B5555;
-}
-
-#demo-slider-tooltip{
-    width: 95% !important;
-    margin-top: 15px;
-}
-#demo-slider-tooltip .slider-selection {
-    background: #25b0f0 !important;
-}
-#demo-slider-tooltip .slider-track-high {
-    background: #d3d3d3 !important;
-}
-.slider.slider-horizontal .slider-track{
-    height: 2px !important;
-}
-.tooltip{
-    display: none !important;.
-}
-.round{
-    margin-top: -4px !important;
-}
-.slider-handle {
-    position: absolute;
-    top: 0;
-    width: 20px;
-    height: 20px;
-    background-color: #25b0f0 !important;
-    background-image: -webkit-linear-gradient(top,#25b0f0 0,#25b0f0 100%) !important;
-    background-image: -o-linear-gradient(top,#25b0f0 0,#25b0f0 100%) !important;
-    background-image: linear-gradient(to bottom,#25b0f0 0,#25b0f0 100%) !important;
-    background-repeat: repeat-x !important;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff149bdf',endColorstr='#ff0480be',GradientType=0) !important;
-    filter: none !important;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05) !important;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05) !important;
-    border: 0 solid transparent !important;
 }
