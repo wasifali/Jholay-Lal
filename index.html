@@ -12,8 +12,8 @@
         <title>Merch App</title>
 
         <!--Scripts-->
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
         <script src="./scripts/script.js"></script>
 
         <!--Drag and drop images-->
@@ -64,6 +64,31 @@
         <!--Style Sheets-->
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="./styles/styles.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/css/bootstrap-slider.min.css" rel="stylesheet" type="text/css">
+
+        <style>
+            #demo-slider-tooltip .slider-selection {
+                background: #57c7f5;
+            }
+            #demo-slider-tooltip .slider-track-high {
+                background: #d3d3d3;
+            }
+            .slider.slider-horizontal {
+                width: 92%;
+                height: 0px;
+                margin-right: 25px;
+            }
+            .slider.slider-horizontal .slider-track {
+                height: 2px;
+            }
+            .slider.slider-horizontal .slider-tick, .slider.slider-horizontal .slider-handle {
+                margin-top: -14px;
+            }
+            .slider .tooltip{
+                display: none;
+            }
+
+        </style>
 
     </head>
     <body ng-app="merch">
@@ -221,9 +246,19 @@
                         <!--Customer Score-->
                         <div class="row" style="margin-left: 20px;">
                             <h4 style="color: lightgray"><i>Customer score</i></h4>
-                            <input ng-model="score" type="range" min="0" max="100" class="slider" id="myRange">
+                            <!--<input ng-model="score" type="range" min="0" max="100" class="slider" id="myRange">-->
+                            <input ng-model="score" id="tooltip-slider-demo" data-slider-id='demo-slider-tooltip' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="10"/>
+                            <script>
+                                $('#tooltip-slider-demo').slider({
+                                    tooltip: 'always',
+                                    formatter: function(value) {
+                                        return 'Tooltip always display: ' + value;
+                                    }
+                                });
+                            </script>
                             <span class="pull-left" style="color: #57c7f5;">100</span><span class="pull-right" style="margin-right: 30px;color: lightgrey;">0</span>
                         </div>
+
                         <hr>
                         <!--Sort By-->
                         <div class="row" style="margin-left: 20px;">
@@ -533,6 +568,12 @@
 
 
         </div>
+
+
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/bootstrap-slider.min.js"></script>
+
+
     </body>
 
 </html>
