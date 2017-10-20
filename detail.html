@@ -1,0 +1,97 @@
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Merch App</title>
+    <!--Scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <script src="./scripts/script.js"></script>
+
+    <!--Style Sheets-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/mobile.style.css">
+</head>
+<body ng-app="merch">
+<div ng-controller="desktopCtrl">
+    <nav class="navbar navbar-default navbar-mob">
+        <a class="pull-left" href="chat.html">
+            <img class="dial-icon" src="assets/back.png">
+            <span style="font-size: 18px;vertical-align: middle; color: black;">Back</span>
+        </a>
+    </nav>
+
+    <div style="padding: 5%;height: 100vh;">
+        <div class="col-sm-10">
+            <div class="row">
+                <div class="col-sm-6 col-sm-push-3">
+                    <h5 style="color: lightgrey" ><i>Xxxxxx</i></h5>
+                    <div class="row" style="text-align: center">
+                        <h4><span>{{chatDetail.userId}} - </span><span style="color:#3F9D2F;">Xxxx Xxxxx Xxxxxxxx </span></h4>
+                    </div>
+                    <hr>
+
+                    <h5 style="color: lightgrey" ><i>Xxxxxxxx xxxxx</i></h5>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{chatDetail.score}}" aria-valuemin="0" aria-valuemax="100" style="width: {{chatDetail.score}}%">
+                            <span class="sr-only"></span>
+                        </div>
+                    </div>
+                    <div class="pull-left" style="color:#3F9D2F;">0</div>
+                    <div class="pull-right" style="color:#3F9D2F;">100</div>
+                    <br>
+
+                    <hr>
+                    <div class="row" style="text-align: center">
+                        <h4><span>{{chatDetail.amount}} Xxxxx Xxxxx -</span><span style="color:lightgrey; font-size: 12px;">(xxxxx {{chatDetail.first_date}})</span></h4>
+                        <span style="font-size: 11px;">Xxxx {{chatDetail.amount2}} xxx xxxxxxxx</span>
+                    </div>
+
+                    <hr>
+                    <h4><span style="color:lightgrey; font-size: 12px;">xxxx xxxxxxxxx </span></h4>
+                    <div class="row pull-right">
+                        <span style="font-size: 16px;">{{chatDetail.score}} </span>
+                        <span style="color:lightgrey; font-size: 13px;"> xxxx xx</span>
+                        <a style="font-size: 16px;">Xxxx Xxx</a>
+                    </div><br><br>
+                    <div class="row" style="text-align: center">
+                        <span style="color:black;font-size: 11px;"><i>Xxxxxxxxxxx xxxxx {{chatDetail.date_delta}}</i></span>
+                    </div>
+
+                    <hr>
+                    <h4><span style="color:lightgrey; font-size: 12px;">Xxxx xxxxxxxxx </span></h4>
+                    <div class="row" style="text-align: center">
+                        <span style="font-size: 16px;">{{chatDetail.last_date2}}</span>
+                    </div>
+
+                    <hr>
+                    <h4><span style="color:lightgrey; font-size: 12px;">Xxxx xx xxxx xxxxx xxxxxxxx</span></h4>
+                    <div class="row" style="text-align: center">
+                        <span class="col-xs-3" style="font-size: 14px;color: #3560a5;">Xxxxx</span>
+                        <div class="col-xs-4" style="font-size: 14px;border: 1px solid #3560a5; background-color: #3560a5;color: white;">
+                            {{chatDetail.amont3}}
+                        </div>
+                    </div><br>
+                    <div class="row" style="text-align: center">
+                        <span class="col-xs-3" style="font-size: 14px;color: #f19900;">Xxxxx</span>
+                        <div class="col-xs-8" style="font-size: 14px;border: 1px solid #f19900; background-color: #f19900;color: white;">
+                            {{chatDetail.amount4}}
+                        </div>
+                        <br>
+                        <button type="button" class="btn">Action1 Action2 Action3</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>

@@ -1,0 +1,157 @@
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Merch App</title>
+    <!--Scripts-->
+
+
+    <!--Style Sheets-->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/css/bootstrap-slider.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/mobile.style.css">
+    <style>
+
+    </style>
+</head>
+<body ng-app="merch">
+<div ng-controller="desktopCtrl">
+    <nav class="navbar navbar-default navbar-mob">
+        <a class="pull-left" href="index.html">
+            <img class="dial-icon" src="assets/back.png">
+            <span style="font-size: 18px;vertical-align: middle; color: black;">Back</span>
+        </a>
+        <div class="row pull-right" style="margin-right: 0px;">
+            <a href="">
+                <h4>Reset</h4>
+            </a>
+        </div>
+    </nav>
+
+    <div style="padding: 5%;height: 85vh;">
+
+        <!--Red-->
+        <div class="row" style="margin-bottom: 10px;">
+            <div class="col-xs-1 col-xs-push-2">
+                <img class="pull-right" style="width: 50px;" src="assets/red.png">
+            </div>
+            <div class="col-xs-6 col-xs-push-2" style="font-size: 15px;padding-left: 0;">
+                <p class="pull-left" style="color: red;">Customers at risk</p>
+            </div>
+            <div class="switches col-xs-3 col-xs-push-2">
+                <div class="switch">
+                    <input ng-model="redState" id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+                    <label for="cmn-toggle-1"></label>
+                </div>
+            </div>
+        </div>
+        <!--Blue-->
+        <div class="row" style="margin-bottom: 10px;">
+            <div class="col-xs-1 col-xs-push-2">
+                <img class="pull-right" style="width: 50px;" src="assets/blue.png">
+            </div>
+            <div class="col-xs-7 col-xs-push-2" style="font-size: 15px;padding-left: 0;">
+                <p class="pull-left" style="color: #25b0f0;">Customers at potential</p>
+            </div>
+            <div class="switches col-xs-3 col-xs-push-1">
+                <div class="switch">
+                    <input ng-model="blueState" id="cmn-toggle-2" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+                    <label for="cmn-toggle-2"></label>
+                </div>
+            </div>
+        </div>
+        <!--ALL-->
+        <div class="row" style="margin-bottom: 10px;">
+            <div class="col-xs-1 col-xs-push-2">
+                <img class="pull-right" style="width: 50px;" src="assets/all.png">
+            </div>
+            <div class="col-xs-6 col-xs-push-2" style="font-size: 15px;padding-left: 0;">
+                <p class="pull-left" style="color: #6f319f;">All customers</p>
+            </div>
+            <div class="switches col-xs-3 col-xs-push-2">
+                <div class="switch">
+                    <input ng-model="allState" id="cmn-toggle-3" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+                    <label for="cmn-toggle-3"></label>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <!--Last purchase-->
+        <div class="row" style="margin-left: 20px;">
+            <span style="color: gray; font-size: 10px;margin-left: -20px;">Last Date</span>
+            <ul class="nav nav-pills">
+                <li class="last-purchase-mobile" ng-class="{blue : lastPur === '1d'}" id="1d">
+                    <h6 ng-click="lastPurchase('1d')">1 day</h6>
+                </li>
+                <li class="last-purchase-mobile" ng-class="{blue : lastPur === '3d'}" id="3d">
+                    <h6 ng-click="lastPurchase('3d')">3 days</h6>
+                </li>
+                <li class="last-purchase-mobile" ng-class="{blue : lastPur === '1w'}" id="1w">
+                    <h6 ng-click="lastPurchase('1w')">1 week</h6>
+                </li>
+                <li class="last-purchase-mobile" ng-class="{blue : lastPur === '1m'}" id="1m">
+                    <h6 ng-click="lastPurchase('1m')">1 month</h6>
+                </li>
+                <li class="last-purchase-mobile" ng-class="{blue : lastPur === '1mp'}" id="1mp">
+                    <h6 ng-click="lastPurchase('1mp')">1 month +</h6>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <!--Customer Score-->
+        <div class="row" style="margin-left: 20px;">
+            <span class="row" style="color: gray; font-size: 10px;">Score</span>
+            <!--<input ng-model="score" type="range" min="0" max="100" class="slider" id="myRange">-->
+            <input ng-model="score" id="tooltip-slider-demo" data-slider-id='demo-slider-tooltip' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="10"/>
+            <div class="row">
+                <span class="pull-left" style="color: #57c7f5;">100</span>
+                <span class="pull-right" style="margin-right: 30px;color: lightgrey;">0</span>
+            </div>
+        </div>
+        <hr>
+        <!--Sort By-->
+        <div class="row" style="margin-left: 10px;">
+            <span style="color: gray; font-size: 10px;margin-left: -10px;">Sort by</span>
+            <ul class="nav nav-pills">
+                <li class="sort-mobile" ng-class="{blue : sort === 'last purchase'}" id="lastp">
+                    <h6 ng-click="sorting('last purchase')">Last Date</h6>
+                </li>
+                <li class="sort-mobile" ng-class="{blue : sort === 'score'}" id="score">
+                    <h6 ng-click="sorting('score')">Score</h6>
+                </li>
+                <li class="sort-mobile" ng-class="{blue : sort === 'total spent'}" id="ts">
+                    <h6 ng-click="sorting('ts')">Total Spent</h6>
+                </li>
+                <li class="sort-mobile" ng-class="{blue : sort === 'pending msg'}" id="pm">
+                    <h6 ng-click="sorting('pm')">Pending Msg</h6>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script src="./scripts/script.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/bootstrap-slider.min.js"></script>
+<script>
+    $('#tooltip-slider-demo').slider({
+        tooltip: 'always',
+        formatter: function(value) {
+            return 'Tooltip always display: ' + value;
+        }
+    });
+
+</script>
+</body>
