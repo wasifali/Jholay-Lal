@@ -10,16 +10,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Merch App</title>
     <!--Scripts-->
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <script src="./scripts/script.js"></script>
 
     <!--Style Sheets-->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/css/bootstrap-slider.min.css" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/mobile.style.css">
-    <style>
-
-    </style>
 </head>
 <body ng-app="merch">
 <div ng-controller="desktopCtrl">
@@ -108,13 +106,9 @@
         <hr>
         <!--Customer Score-->
         <div class="row" style="margin-left: 20px;">
-            <span class="row" style="color: gray; font-size: 10px;">Score</span>
-            <!--<input ng-model="score" type="range" min="0" max="100" class="slider" id="myRange">-->
-            <input ng-model="score" id="tooltip-slider-demo" data-slider-id='demo-slider-tooltip' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="10"/>
-            <div class="row">
-                <span class="pull-left" style="color: #57c7f5;">100</span>
-                <span class="pull-right" style="margin-right: 30px;color: lightgrey;">0</span>
-            </div>
+            <span style="color: gray; font-size: 10px;margin-left: -20px;">Score</span>
+            <input ng-model="score" type="range" min="0" max="100" class="slider" id="myRange">
+            <span class="pull-left" style="color: #57c7f5;">100</span><span class="pull-right" style="margin-right: 30px;color: lightgrey;">0</span>
         </div>
         <hr>
         <!--Sort By-->
@@ -139,19 +133,4 @@
 
 </div>
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-<script src="./scripts/script.js"></script>
-<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/bootstrap-slider.min.js"></script>
-<script>
-    $('#tooltip-slider-demo').slider({
-        tooltip: 'always',
-        formatter: function(value) {
-            return 'Tooltip always display: ' + value;
-        }
-    });
-
-</script>
 </body>
