@@ -110,7 +110,7 @@
         <!--DESKTOP VIEWS-->
         <div id="desktopCtrl" ng-controller="desktopCtrl" class="hidden-xs">
             <div class="row top-nav">
-                <div class="col-lg-4 col-md-5 col-sm-6" style="border-right: 1px solid #439dbb;">
+                <div class="container pull-left" style="width: 430px;border-right: 1px solid #439dbb;">
                     <div class="row" style="margin-bottom: 20px;">
                         <div class="col-sm-1"></div>
                         <div class="col-sm-10">
@@ -128,10 +128,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-8 col-md-7 col-sm-6">
+                <div class="col-lg-7 col-md-6 col-sm-5">
                     <div class="row ">
-                        <div class="col-sm-3"></div>
-                        <div class="col-sm-9 top-img-nav">
+                        <div class="col-lg-3 col-md-3 col-sm-2"></div>
+                        <div class="col-lg-9 col-md-9 col-sm-12 top-img-nav">
                             <a ng-click="menuChoice(1)">
                                 <img ng-class="{actImg : chatScreen === true}" class="nav-images" src="assets/chat-icon.png">
                             </a>
@@ -150,8 +150,9 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-4 col-md-5 col-sm-6" style="border-right: 1px solid #439dbb; padding-right: 0px;">
 
+                <!--Chat List-->
+                <div class="container pull-left" style="width: 430px;border-right: 1px solid #439dbb; padding-right: 0px;">
                     <!--chat lists-->
                     <ul ng-if="!filterScreen" class="list-group" style="overflow-x: hidden; height: 86.3vh;">
                         <div class="chat-list">
@@ -289,7 +290,7 @@
                     </div>
                 </div>
 
-                <div id="chat-cont" class="col-lg-7 col-md-6 col-sm-4" style="padding: 0px">
+                <div id="chat-cont" class="col-lg-7 col-md-7 col-sm-5" style="overflow-x:hidden; padding: 0px">
 
                     <!--Chat box-->
                     <div class="row" ondrop="drop(event)" ondragover="allowDrop(event)" style="height: 69vh;;">
@@ -449,7 +450,7 @@
 
                 </div>
                 <!--Side image bar-->
-                <div ondrop="drop(null)" ondragover="allowDrop(null)" class="col-lg-1 col-md-1 col-sm-2 image-box">
+                <div style="width: 101px" ondrop="drop(null)" ondragover="allowDrop(null)" class="image-box">
                     <div class="images-bar">
                         <div ng-if="chatScreen || filterScreen">
                             <div>

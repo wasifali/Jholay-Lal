@@ -213,8 +213,7 @@ li{
 }
 
 .jumbotron{
-    background-color:#B1D9E7 !important;
-    opacity: 0.7;
+    background-color:#c7e4ee !important;
     border-top: 1px solid lightgray;
     padding-left: 5%;
     padding-right: 14%;
@@ -263,8 +262,8 @@ li{
 
 .images-bar{
     text-align: center;
-    background-color: #B1D9E7;
-    opacity: 0.7;
+    background-color: #c7e4ee;
+    opacity: 1;
     height: 69vh;
     overflow-y: scroll;
 
@@ -272,9 +271,11 @@ li{
 }
 
 .image-box{
-    opacity: 0.7;
+    position: absolute;
+    right: 0;
+    opacity: 1;
     height: 86.3vh;
-    background-color: #B1D9E7;
+    background-color: #c7e4ee;
     padding: 0px !important;
 }
 
