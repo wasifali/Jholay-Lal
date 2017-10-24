@@ -151,6 +151,7 @@ i {
 
 .top-img-nav{
     margin-top: 2%;
+    margin-left: 20%;
     text-align: center;
 }
 
@@ -225,6 +226,7 @@ li{
 
 .chat-search{
     margin-top: 2%;
+    margin-left: 0%;
 }
 
 .thumb{
@@ -387,7 +389,7 @@ li{
 
 #custom-chat-search{
     padding: 3px;
-    border: solid 2px #65B4CE;
+    border: solid 1px #65B4CE;
     border-radius: 6px;
     background-color: #fff;
     height: 30px;
