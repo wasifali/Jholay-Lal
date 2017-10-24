@@ -130,8 +130,7 @@
                 </div>
                 <div class="col-lg-7 col-md-6 col-sm-5">
                     <div class="row ">
-                        <div class="col-lg-3 col-md-3 col-sm-2"></div>
-                        <div class="col-lg-9 col-md-9 col-sm-12 top-img-nav">
+                        <div class="top-img-nav">
                             <a ng-click="menuChoice(1)">
                                 <img ng-class="{actImg : chatScreen === true}" class="nav-images" src="assets/chat-icon.png">
                             </a>
@@ -176,7 +175,7 @@
                                             </div>
                                             <div class="row marg">
                                                 <p><span class="date">{{chat.last_date}}</span>   <i class="desktop-font" style="font-size: 13px;">xxxxx xxxx</i></p>
-                                                <p><span class="date">{{chat.amount}}</span>   <i class="desktop-font">xxxxx xxxxx   {{chat.first_date}}</i></p>
+                                                <p><span class="date">{{chat.amount}}</span>   <i style="font-size: 15px;" class="desktop-font">xxxxx xxxxx   {{chat.first_date}}</i></p>
                                             </div>
                                         </div>
                                         <div class="col-sm-4" style="margin-top: 25px; text-align: center;">
@@ -290,10 +289,10 @@
                     </div>
                 </div>
 
-                <div id="chat-cont" class="col-lg-7 col-md-7 col-sm-5" style="overflow-x:hidden; padding: 0px">
+                <div id="chat-cont" style="overflow-x:hidden;">
 
                     <!--Chat box-->
-                    <div class="row" ondrop="drop(event)" ondragover="allowDrop(event)" style="height: 69vh;;">
+                    <div id="msg-cont" class="row" ondrop="drop(event)" ondragover="allowDrop(event)" style="height: 85vh;">
 
                         <!--Messages Screen-->
                         <div id="chatbox" ng-if="chatScreen || filterScreen" class="col-sm-12 chat-box">
@@ -450,7 +449,7 @@
 
                 </div>
                 <!--Side image bar-->
-                <div style="width: 114px" ondrop="drop(null)" ondragover="allowDrop(null)" class="image-box">
+                <div style="width: 80px; top: 108px;" ondrop="drop(null)" ondragover="allowDrop(null)" class="image-box">
                     <div class="images-bar">
                         <div ng-if="chatScreen || filterScreen">
                             <div>

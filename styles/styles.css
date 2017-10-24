@@ -9,7 +9,7 @@ body{
 
 .desktop-font{
     color: #8D8D8D;
-    font-size: 1.2vw;
+    font-size: 16px;
 }
 
 .img-responsive{
@@ -151,6 +151,7 @@ i {
 
 .top-img-nav{
     margin-top: 3%;
+    text-align: center;
 }
 
 .nav-images{
@@ -264,7 +265,7 @@ li{
     text-align: center;
     background-color: #c7e4ee;
     opacity: 1;
-    height: 69vh;
+    height: 68vh;
     overflow-y: scroll;
 
     border-left: 1px solid lightgrey ;
@@ -438,7 +439,10 @@ li{
     border-radius: 10px !important;
 }
 
-
+.input-bar{
+    position: absolute;
+    bottom: -13px;
+}
 
 
 
@@ -686,9 +690,10 @@ blockquote p {
 ------------------------------------------ */
 
 .triangle-right.left {
+    max-width: 50%;
     margin-left:4%;
-    background:#e2e2e2;
-    color: #717171;
+    background:#8D74B1;
+    color: white;
     font-size: 16px;
 }
 
@@ -696,9 +701,10 @@ blockquote p {
 ------------------------------------------ */
 
 .triangle-right.right {
+    max-width: 50%;
     margin-left:3%;
-    background:#8D74B1;
-    color: white;
+    background:#e2e2e2;
+    color: #717171;
     font-size: 16px;
 }
 
@@ -1937,13 +1943,13 @@ input.cmn-toggle-round-flat:checked + label:after {
     background-color: #8ce196;
 }
 
-@media screen and (min-width: 768px) {
-    .col-sm-5 {
-        width: 45.666667% !important;
+@media screen and (max-width: 1024px) {
+    #msg-cont{
+        width: 85%;
     }
 }
-@media screen and (min-width: 992px) {
-    .col-md-7 {
-        width: 57.33333333% !important;
+@media screen and (min-width: 1025px) {
+    #msg-cont{
+        width: 93%;
     }
 }
