@@ -217,9 +217,9 @@ li{
 .jumbotron{
     background-color:#c7e4ee !important;
     border-top: 1px solid lightgray;
-    padding-left: 5%;
+    padding-left: 2%;
     padding-right: 14%;
-    padding-top: 20px !important;
+    padding-top: 10px !important;
     padding-bottom: 20px !important;
     margin-bottom: 0 !important;
 }
@@ -694,8 +694,8 @@ blockquote p {
 .triangle-right.left {
     max-width: 50%;
     margin-left:4%;
-    background:#8D74B1;
-    color: white;
+    background:#e2e2e2;
+    color: #717171;
     font-size: 16px;
 }
 
@@ -705,8 +705,8 @@ blockquote p {
 .triangle-right.right {
     max-width: 50%;
     margin-left:3%;
-    background:#e2e2e2;
-    color: #717171;
+    background:#8D74B1;
+    color: white;
     font-size: 16px;
 }
 
@@ -1953,5 +1953,17 @@ input.cmn-toggle-round-flat:checked + label:after {
 @media screen and (min-width: 1025px) {
     #msg-cont{
         width: 93%;
+    }
+}
+
+@media screen and (min-height : 590px){
+    .images-bar{
+        height: 69vh;
+    }
+}
+
+@media screen and (min-height : 700px){
+    .images-bar{
+        height: 80vh;
     }
 }

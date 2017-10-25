@@ -235,8 +235,8 @@
                         <hr>
 
                         <!--Last purchase-->
-                        <div class="row" style="margin-left: 20px;">
-                            <h4 style="color: lightgray"><i>Last Purchase</i></h4>
+                        <div class="row" style="margin-left: 10px;">
+                            <h5 style="color: lightgray"><i>Last Purchase</i></h5>
                             <ul class="nav nav-pills">
                                 <li class="last-purchase" ng-class="{blue : lastPur === '1d'}" id="1d">
                                     <h6 ng-click="lastPurchase('1d')">1 day</h6>
@@ -257,8 +257,8 @@
                         </div>
                         <hr>
                         <!--Customer Score-->
-                        <div id="score-bar" class="row" style="margin-left: 20px;">
-                            <h4 style="color: lightgray"><i>Customer score</i></h4>
+                        <div id="score-bar" class="row" style="margin-left: 10px;">
+                            <h5 style="color: lightgray"><i>Customer score</i></h5>
                             <!--<input ng-model="score" type="range" min="0" max="100" class="slider" id="myRange">-->
                             <input id="tooltip-slider-demo" data-slider-id='demo-slider-tooltip' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="10"/>
 
@@ -267,8 +267,8 @@
 
                         <hr>
                         <!--Sort By-->
-                        <div class="row" style="margin-left: 20px;">
-                            <h4 style="color: lightgray"><i>Sort by</i></h4>
+                        <div class="row" style="margin-left: 10px;">
+                            <h5 style="color: lightgray"><i>Sort by</i></h5>
                             <ul class="nav nav-pills">
                                 <li class="sort" ng-class="{blue : sort === 'last purchase'}" id="lastp">
                                     <h6 ng-click="sorting('last purchase')">Last Date</h6>
@@ -333,7 +333,7 @@
                                 <div class="row dialScreen">
                                     <input onkeypress="input(event)" onblur="this.focus()" style="opacity: 0;" autofocus>
                                     <div ng-if="number.length" class="dial-heading">
-                                        {{number[0]}}{{number[1]}}{{number[2]}}{{number[3]}}{{number[4]}}{{number[5]}}
+                                        {{number[0]}}     {{number[1]}}     {{number[2]}}     {{number[3]}}     {{number[4]}}     {{number[5]}}
                                     </div>
                                     <div ng-if="!number.length">
                                         <img class="dial-grey" src="http://www.iconsdb.com/icons/preview/gray/circle-xxl.png">
@@ -369,7 +369,7 @@
                         <!--Details Screen-->
                         <div ng-if="detailScreen" class="col-sm-12">
                             <div class="row">
-                                <div class="col-sm-6 col-sm-push-3">
+                                <div class="col-lg-4 col-lg-push-4 col-sm-6 col-sm-push-3">
                                     <h5 style="color: lightgrey" ><i>Xxxxxx</i></h5>
                                     <div class="row" style="text-align: center">
                                         <h4><span>{{chatDetail.userId}} - </span><span style="color:#3F9D2F;">Xxxx Xxxxx Xxxxxxxx </span></h4>
