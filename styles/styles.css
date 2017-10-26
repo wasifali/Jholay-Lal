@@ -18,6 +18,7 @@ body{
 
 
 .dialScreen{
+    height: 75px;
     text-align: center;
     padding-top: 20px;
 }
@@ -290,6 +291,10 @@ li{
     background-color: #B1D9E7;
     opacity: 0.7;
     border-color: #B1D9E7;
+}
+
+.last-row{
+    margin-left: 70px;
 }
 
 .chat-list-img{
@@ -1965,5 +1970,18 @@ input.cmn-toggle-round-flat:checked + label:after {
 @media screen and (min-height : 700px){
     .images-bar{
         height: 80vh;
+    }
+}
+@media screen and (width: 1150px) {
+    .dial-thumb {
+        height: 100px;
+        width: 100px;
+        margin-top: 20px;
+        margin-right: 20px;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+    .last-row{
+        margin-left: 8%;
     }
 }
