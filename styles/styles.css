@@ -1,8 +1,6 @@
 html{
     overflow-x: hidden;
     border: 2px solid #439DBB ;
-    height: 102vh;
-    overflow-y: hidden;
 }
 
 body{
@@ -1969,11 +1967,19 @@ input.cmn-toggle-round-flat:checked + label:after {
     .images-bar{
         height: 69vh;
     }
+    html{
+        height: 104%;
+        overflow-y: scroll;
+    }
 }
 
 @media screen and (min-height : 700px){
     .images-bar{
         height: 80vh;
+    }
+    html{
+        height: 125%;
+        overflow-y: hidden;
     }
 }
 @media screen and (max-height : 1000px){
