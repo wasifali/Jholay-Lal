@@ -151,38 +151,38 @@
                 <!--Chat List-->
                 <div class="container pull-left" style="width: 430px;border-right: 1px solid #439dbb; padding-right: 0px;">
                     <!--chat lists-->
-                    <ul ng-if="!filterScreen" class="list-group" style="overflow-x: hidden; height: 86.3vh;">
+                    <ul ng-if="!filterScreen" class="list-group" style="overflow-x: hidden;">
                         <div class="chat-list">
-                            <li ng-class="{active : activeId === chat.userId}" class="list-group-item desktop-chat-list row" ng-repeat="chat in data" ng-click="showChat(chat.userId)">
-                            <div ng-click="setActive(chat.userId)">
-                            <div class="col-sm-3">
-                                <img class="img-responsive" src="assets/{{chat.state}}">
-                            </div>
-                            <div class="chat-sub col-sm-9">
-                                    <div class="row">
-                                        <div class="col-sm-8">
-                                            <div class="row">
-                                                <p><i class="desktop-font">Xxxxx</i> <span style="color: #8D8D8D; font-size: 15px;">{{chat.userId}}</span></p>
-                                            </div>
-                                            <div class="row">
-                                                <div class="progress">
-                                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{chat.score}}" aria-valuemin="0" aria-valuemax="100" style="width: {{chat.score}}%">
-                                                        <span class="sr-only"></span>
+                            <li style="border-bottom: 0px !important;" ng-class="{active : activeId === chat.userId}" class="list-group-item desktop-chat-list row" ng-repeat="chat in data" ng-click="showChat(chat.userId)">
+                                <div ng-click="setActive(chat.userId)">
+                                    <div class="col-sm-3">
+                                        <img class="img-responsive" src="assets/{{chat.state}}">
+                                    </div>
+                                    <div class="chat-sub col-sm-9">
+                                        <div class="row">
+                                            <div class="col-sm-8">
+                                                <div class="row">
+                                                    <p><i class="desktop-font">Xxxxx</i> <span style="color: #8D8D8D; font-size: 15px;">{{chat.userId}}</span></p>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{chat.score}}" aria-valuemin="0" aria-valuemax="100" style="width: {{chat.score}}%">
+                                                            <span class="sr-only"></span>
+                                                        </div>
                                                     </div>
                                                 </div>
+                                                <div class="row marg">
+                                                    <p><span class="date">{{chat.last_date}}</span>   <i class="desktop-font" style="font-size: 13px;">xxxxx xxxx</i></p>
+                                                    <p><span class="date">{{chat.amount}}</span>   <i style="font-size: 15px;" class="desktop-font">xxxxx xxxxx   {{chat.first_date}}</i></p>
+                                                </div>
                                             </div>
-                                            <div class="row marg">
-                                                <p><span class="date">{{chat.last_date}}</span>   <i class="desktop-font" style="font-size: 13px;">xxxxx xxxx</i></p>
-                                                <p><span class="date">{{chat.amount}}</span>   <i style="font-size: 15px;" class="desktop-font">xxxxx xxxxx   {{chat.first_date}}</i></p>
+                                            <div class="col-sm-4" style="margin-top: 25px; text-align: center;">
+                                                <img class="chat-list-img" src="assets/{{chat.activity}}">
                                             </div>
-                                        </div>
-                                        <div class="col-sm-4" style="margin-top: 25px; text-align: center;">
-                                            <img class="chat-list-img" src="assets/{{chat.activity}}">
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
+                            </li>
                         </div>
                     </ul>
                     <div ng-show="filterScreen" style="padding: 5%;height: 86.3vh;">
@@ -232,11 +232,11 @@
                                 </div>
                             </div>
                         </div>
-                        <hr>
+                        <hr style="margin-bottom: 0px; height: 1px;">
 
                         <!--Last purchase-->
-                        <div class="row" style="margin-left: 10px;">
-                            <h5 style="color: lightgray"><i>Last Purchase</i></h5>
+                        <div class="row" style="margin-left: 2px;">
+                            <h6 style="color: #DCDCDC; margin-bottom: 25px;"><i>Last Purchase</i></h6>
                             <ul class="nav nav-pills">
                                 <li class="last-purchase" ng-class="{blue : lastPur === '1d'}" id="1d">
                                     <h6 ng-click="lastPurchase('1d')">1 day</h6>
@@ -255,20 +255,20 @@
                                 </li>
                             </ul>
                         </div>
-                        <hr>
+                        <hr style="margin-bottom: 0px; height: 1px;">
                         <!--Customer Score-->
-                        <div id="score-bar" class="row" style="margin-left: 10px;">
-                            <h5 style="color: lightgray"><i>Customer score</i></h5>
+                        <div id="score-bar" class="row" style="margin-left: 2px;">
+                            <h6 style="color: #DCDCDC; margin-bottom: 25px;"><i>Customer score</i></h6>
                             <!--<input ng-model="score" type="range" min="0" max="100" class="slider" id="myRange">-->
                             <input id="tooltip-slider-demo" data-slider-id='demo-slider-tooltip' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="10"/>
 
                             <span class="pull-left" style="color: #57c7f5;">100</span><span class="pull-right" style="margin-right: 30px;color: lightgrey;">0</span>
                         </div>
 
-                        <hr>
+                        <hr style="margin-bottom: 0px; height: 1px;">
                         <!--Sort By-->
-                        <div class="row" style="margin-left: 10px;">
-                            <h5 style="color: lightgray"><i>Sort by</i></h5>
+                        <div class="row" style="margin-left: 2px;">
+                            <h6 style="color: #DCDCDC; margin-bottom: 25px;"><i>Sort by</i></h6>
                             <ul class="nav nav-pills">
                                 <li class="sort" ng-class="{blue : sort === 'last purchase'}" id="lastp">
                                     <h6 ng-click="sorting('last purchase')">Last Date</h6>
@@ -369,12 +369,12 @@
                         <!--Details Screen-->
                         <div ng-if="detailScreen" class="col-sm-12">
                             <div class="row">
-                                <div class="col-lg-4 col-lg-push-4 col-sm-6 col-sm-push-3">
+                                <div class="col-lg-6 col-lg-push-3 col-sm-6 col-sm-push-3">
                                     <h5 style="color: lightgrey" ><i>Xxxxxx</i></h5>
                                     <div class="row" style="text-align: center">
                                         <h4><span>{{chatDetail.userId}} - </span><span style="color:#3F9D2F;">Xxxx Xxxxx Xxxxxxxx </span></h4>
                                     </div>
-                                    <hr>
+                                    <hr style="margin-bottom: 0px; height: 2px;">
 
                                     <h5 style="color: lightgrey" ><i>Xxxxxxxx xxxxx</i></h5>
                                     <div class="progress">
@@ -386,42 +386,42 @@
                                     <div class="pull-right" style="color:#3F9D2F;">100</div>
                                     <br>
 
-                                    <hr>
+                                    <hr style="margin-bottom: 0px; height: 2px;">
                                     <div class="row" style="text-align: center">
                                         <h4><span>{{chatDetail.amount}} Xxxxx Xxxxx -</span><span style="color:lightgrey; font-size: 12px;">(xxxxx {{chatDetail.first_date}})</span></h4>
                                         <span style="font-size: 11px;">Xxxx {{chatDetail.amount2}} xxx xxxxxxxx</span>
                                     </div>
 
-                                    <hr>
+                                    <hr style="margin-bottom: 0px; height: 2px;">
                                     <h4><span style="color:lightgrey; font-size: 12px;">xxxx xxxxxxxxx </span></h4>
-                                    <div class="row pull-right">
-                                        <span style="font-size: 16px;">{{chatDetail.score}} </span>
-                                        <span style="color:lightgrey; font-size: 13px;"> xxxx xx</span>
-                                        <a style="font-size: 16px;">Xxxx Xxx</a>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-12 col-lg-8 col-lg-push-5">
+                                            <span style="font-size: 16px;">{{chatDetail.score}} </span>
+                                            <span style="color:lightgrey; font-size: 13px;"> xxxx xx</span>
+                                            <a style="font-size: 16px;">Xxxx Xxx</a>
+                                        </div>
                                     </div><br><br>
                                     <div class="row" style="text-align: center">
                                         <span style="color:black;font-size: 11px;"><i>Xxxxxxxxxxx xxxxx {{chatDetail.date_delta}}</i></span>
                                     </div>
 
-                                    <hr>
+                                    <hr style="margin-bottom: 0px; height: 2px;">
                                     <h4><span style="color:lightgrey; font-size: 12px;">Xxxx xxxxxxxxx </span></h4>
                                     <div class="row" style="text-align: center">
                                         <span style="font-size: 16px;">{{chatDetail.last_date2}}</span>
                                     </div>
 
-                                    <hr>
+                                    <hr style="margin-bottom: 0px; height: 2px;">
                                     <h4><span style="color:lightgrey; font-size: 12px;">Xxxx xx xxxx xxxxx xxxxxxxx</span></h4>
-                                    <div class="row" style="text-align: center">
-                                        <span class="col-sm-2"></span>
-                                        <span class="col-sm-4" style="font-size: 14px;color: #3560a5;">Xxxxx</span>
-                                        <div class="col-sm-4" style="font-size: 14px;border: 1px solid #3560a5; background-color: #3560a5;color: white;">
+                                    <div class="row">
+                                        <span class="col-sm-2 col-lg-3" style="text-align: center;font-size: 14px;color: #439DBB;">Xxxxx</span>
+                                        <div class="col-sm-5 col-lg-5" style="text-align: center;font-size: 14px;border: 1px solid #439DBB; background-color: #439DBB;color: white;">
                                             {{chatDetail.amont3}}
                                         </div>
                                     </div><br>
-                                    <div class="row" style="text-align: center">
-                                        <span class="col-sm-2"></span>
-                                        <span class="col-sm-4" style="font-size: 14px;color: #f19900;">Xxxxx</span>
-                                        <div class="col-sm-5" style="font-size: 14px;border: 1px solid #f19900; background-color: #f19900;color: white;">
+                                    <div class="row">
+                                        <span class="col-sm-2 col-lg-3" style="text-align: center;font-size: 14px;color: #F28500;">Xxxxx</span>
+                                        <div class="col-sm-5 col-lg-7" style="text-align: center;font-size: 14px;border: 1px solid #F28500; background-color: #F28500;color: white;">
                                             {{chatDetail.amount4}}
                                         </div>
                                         <br>

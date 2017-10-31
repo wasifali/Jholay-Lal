@@ -1,6 +1,8 @@
 html{
     overflow-x: hidden;
     border: 2px solid #439DBB ;
+    height: 102vh;
+    overflow-y: hidden;
 }
 
 body{
@@ -60,6 +62,7 @@ body{
 .nav-pills{
     width: 97%;
     margin-top: 12px;
+    margin-left: 10px;
     color: #57c7f5;
 }
 
@@ -78,8 +81,9 @@ body{
 }
 
 hr{
+    border: none !important;
+    background-color: darkgray !important;
     margin-top: 10px !important;
-    margin-bottom: 10px !important;
 }
 
 .chat-box{
@@ -147,7 +151,7 @@ i {
 }
 
 .top-nav{
-    border-bottom: 1px solid lightgray;
+    border-bottom: 2px solid gray;
 }
 
 .top-img-nav{
@@ -426,11 +430,11 @@ li{
 }
 
 .btn{
-    background-color: #3560a5;
-    border-color: #3560a5;
+    background-color: #467FD7;
+    border-color: #467FD7;
     color: white;
     margin-bottom: 14px;
-    margin-top: 14px;
+    margin-top: 20px;
 }
 
 .btn:hover{
@@ -1971,7 +1975,19 @@ input.cmn-toggle-round-flat:checked + label:after {
     .images-bar{
         height: 80vh;
     }
+    .list-group{
+        height: 86.3vh;
+    }
 }
+@media screen and (max-height : 1000px){
+    .images-bar{
+        height: 70vh;
+    }
+    .list-group{
+        height: 88vh;
+    }
+}
+
 @media screen and (width: 1150px) {
     .dial-thumb {
         height: 100px;
