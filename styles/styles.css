@@ -1975,9 +1975,6 @@ input.cmn-toggle-round-flat:checked + label:after {
     .images-bar{
         height: 80vh;
     }
-    .list-group{
-        height: 86.3vh;
-    }
 }
 @media screen and (max-height : 1000px){
     .images-bar{
