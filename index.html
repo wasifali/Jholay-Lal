@@ -539,7 +539,7 @@
                         ng-repeat="chat in data"
                         ng-click="showChat(chat.userId)">
 
-                        <a href="chat.html">
+                        <a href="chat.html?id={{chat.userId}}">
                             <div ng-click="setActive(chat.userId)">
                                 <div class="col-xs-3">
                                     <img class="img-responsive" style="margin-top: 19px;" src="assets/{{chat.state}}">

@@ -746,6 +746,34 @@ angular.module('merch', [])
                 ]
             }
         ];
+
+
+
+        $scope.showChat = function (id) {
+            for(i = 0; i < $scope.sampleData.length ; i++){
+                if($scope.sampleData[i].userId === id){
+                    $scope.chat = $scope.sampleData[i].chatMasseges ;
+                    $scope.chatId = $scope.sampleData[i].userId;
+                    $scope.chatDetail = $scope.sampleData[i];
+                }
+            }
+
+            if(window.location.href.indexOf('detail.html') < 0) {
+                var objDiv = document.getElementById("chatbox");
+                objDiv.scrollTop = (objDiv.scrollHeight);
+            }
+        }
+        $scope.url = window.location.href.split('=')[1];
+        if($scope.url != undefined){
+            $scope.showChat($scope.url);
+        }
+        else{
+            $scope.chatId = $scope.sampleData[0].userId;
+            $scope.chat = $scope.sampleData[0].chatMasseges;
+            $scope.chatDetail = $scope.sampleData[0];
+        }
+
+
         //$scope.redState = true;
         //$scope.blueState = false;
         //$scope.allState = false;
@@ -757,9 +785,6 @@ angular.module('merch', [])
         $scope.dialScreen = false;
         $scope.filterScreen = false;
         $scope.detailScreen = false;
-        $scope.chat = $scope.sampleData[0].chatMasseges;
-        $scope.chatId = $scope.sampleData[0].userId;
-        $scope.chatDetail = $scope.sampleData[0];
         $scope.message = null;
         $scope.filter = false;
         $scope.activeId = $scope.sampleData[0].userId;
@@ -887,17 +912,6 @@ angular.module('merch', [])
             }
         }
 
-        $scope.showChat = function (id) {
-            for(i = 0; i < $scope.sampleData.length ; i++){
-                if($scope.sampleData[i].userId === id){
-                    $scope.chat = $scope.sampleData[i].chatMasseges ;
-                    $scope.chatId = $scope.sampleData[i].userId;
-                    $scope.chatDetail = $scope.sampleData[i];
-                }
-            }
-            var objDiv = document.getElementById("chatbox");
-            objDiv.scrollTop = (objDiv.scrollHeight);
-        }
 
         $scope.sendMessage = function(id, message){
 
