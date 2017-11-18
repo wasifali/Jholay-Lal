@@ -151,7 +151,7 @@
                 <!--Chat List-->
                 <div class="container pull-left" style="width: 430px;border-right: 1px solid #439dbb; padding-right: 0px;">
                     <!--chat lists-->
-                    <ul ng-if="!filterScreen" class="list-group" style="overflow-x: hidden;">
+                    <ul ng-if="!filterScreen" class="list-group">
                         <div class="chat-list">
                             <li style="border-bottom: 0px !important;" ng-class="{active : activeId === chat.userId}" class="list-group-item desktop-chat-list row" ng-repeat="chat in data" ng-click="showChat(chat.userId)">
                                 <div ng-click="setActive(chat.userId)">
@@ -415,15 +415,17 @@
                                     <div class="row">
                                         <span class="col-sm-2 col-lg-3" style="text-align: center;font-size: 14px;color: #439DBB;">Xxxxx</span>
                                         <div class="col-sm-10 col-lg-9" style="padding-left: 0;">
-                                            <p style="padding-left: 10px; padding-right: 10px; margin:0; width: fit-content; text-align: center;font-size: 14px;border: 1px solid #439DBB; background-color: #439DBB;color: white;">
+                                            <p style="padding-left: 20px; padding-right: 20px; margin:0; width: fit-content; text-align: center;font-size: 14px;border: 1px solid #439DBB; background-color: #439DBB;color: white;">
                                             {{chatDetail.amont3}}
                                             </p>
                                         </div>
                                     </div><br>
                                     <div class="row">
                                         <span class="col-sm-2 col-lg-3" style="text-align: center;font-size: 14px;color: #F28500;">Xxxxx</span>
-                                        <div class="col-sm-5 col-lg-7" style="text-align: center;font-size: 14px;border: 1px solid #F28500; background-color: #F28500;color: white;">
-                                            {{chatDetail.amount4}}
+                                        <div class="col-sm-10 col-lg-9" style="padding-left: 0;">
+                                            <p style="padding-left: 20px; padding-right: 20px; margin:0; width: fit-content; text-align: center;font-size: 14px;border: 1px solid #F28500; background-color: #F28500;color: white;">
+                                                {{chatDetail.amont3}}
+                                            </p>
                                         </div>
                                         <br>
                                         <div style="text-align: center;">
